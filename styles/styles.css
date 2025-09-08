@@ -14,7 +14,7 @@ nav {
 }
 nav a {
     color: aqua;
-    padding: auto;
+    padding: 0;
     display: block;
 }
 
