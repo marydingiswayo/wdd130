@@ -54,7 +54,7 @@ hero img {
 h1 {
     position: absolute;
     top: 20px;
-    width: 100px;
+    width: 100%;
     padding: 16px;
     text-align: center;
     opacity: 0.7;
