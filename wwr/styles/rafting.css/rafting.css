@@ -14,7 +14,7 @@ header{
 *{
     margin: 0;
     padding: 0;
-    box-sizing: boarder-box;
+    box-sizing: 2px 2px 5px #888;
 }
 
 body {
