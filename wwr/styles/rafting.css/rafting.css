@@ -75,6 +75,6 @@ h1 {
     width: 200px;
     height: auto;
 }
-.social-media{
+.social-media a {
     text-decoration: none;
 }
