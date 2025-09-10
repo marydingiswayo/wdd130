@@ -78,7 +78,11 @@ h1 {
 .socialmedia a {
     text-decoration: none;
 }
-.craa{
-    width: 10;
+.craa img{
+    width: 200px;
+    height: auto;
+}
+.mary img{
+    width: 200px;
     height: auto;
 }
