@@ -14,7 +14,7 @@ header{
 *{
     margin: 0;
     padding: 0;
-    box-sizing: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -36,16 +36,19 @@ nav, p, section, article {
     margin: 16px;
     padding: 8px;
 }
+nav a{
+    align-items: center;
 
+}
 socialmedia a {
     text-decoration: none;
 }
 
-hero {
+.hero {
     position: relative;
 }
 
-hero img {
+.hero img {
     display: block;
     width: 100%;
     height: auto;
@@ -62,7 +65,7 @@ h1 {
     color: #fff;
 }
 
-hero article img {
+.hero article img {
     float: right;
     width: 125px;
 }
