@@ -52,11 +52,11 @@ socialmedia a {
     text-decoration: none;
 }
 
-.hero {
+.map {
     position: relative;
 }
 
-.hero img {
+.map img {
     display: block;
     width: 100%;
     height: auto;
@@ -74,24 +74,23 @@ h1 {
     color: #fff;
 }
 
-.hero article img {
+.map img {
     float: right;
     width: 125px;
 }
 
-.socialmedia img {
-    width: 50px;
-    height: auto;
-}
-.socialmedia a {
-    text-decoration: none;
-}
-.craa img{
+
+.employee1 img{
     width: 200px;
     height: auto;
 }
-.mary img{
+.employee2 img{
     width: 200px;
+    height: auto;
+}
+
+.employ3 img{
+    width:  200;
     height: auto;
 }
 .grid {
