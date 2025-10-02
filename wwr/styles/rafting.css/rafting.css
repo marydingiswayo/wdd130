@@ -85,7 +85,7 @@ font-family: var(--body-font);
 color: var(--ancient1-color);
 font-family: 'Montserrat',sans-serif;
 font-weight:  400;
-background-color: #FFFFFF;
+background-color: #18072e;
 color: #333333;
 margin: 0;
 padding: 0;
@@ -202,8 +202,15 @@ h1 {
     align-items: center;
 }
 main {
-    grid-column: 2/3;
-    margin: 1rem;
+    margin: 0 auto;
+    /* width: 90%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.map iframe{
+    width: 100%;
+    height: 700px;
 }
 aside {
     width: 20rem;
@@ -211,6 +218,7 @@ aside {
     grid-column: 1/2;
     grid-row: 1/2;
 }
+
 .featured-rapids{
     display: flex;
     flex-wrap: wrap;
