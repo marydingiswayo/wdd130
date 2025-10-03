@@ -325,3 +325,10 @@ footer {
 .capitalize {
   text-transform: capitalize;
 }
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Lato', sans-serif;
+}
