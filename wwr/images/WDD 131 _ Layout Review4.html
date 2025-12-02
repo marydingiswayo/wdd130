@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://byui-cse.github.io/wdd131-ww-course/week01/prepare-layout-review.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | Layout Review</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 131 _ Layout Review4_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 131 _ Layout Review4_files/course.css">
+  <link rel="stylesheet" href="./WDD 131 _ Layout Review4_files/vs2015.min.css">
+  <script src="./WDD 131 _ Layout Review4_files/ca896ddec2fd3e19_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="./WDD 131 _ Layout Review4_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/">Home</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week01">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week02/">W2</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07">W7</a></span>
+    </nav>
+
+    <h2>W01 Learning Activity: HTML and CSS Review</h2>
+    <h3>Overview</h3>
+    <p>This learning activity is a review of HTML and CSS layout principles, focusing on core layout design and
+      development. Mastering the workflow process – writing code in VS Code, testing, committing, and pushing your
+      work
+      to your GitHub repository – is critical to your success in the course.</p>
+
+    <h3>Task</h3>
+    <p>Create the following layout with <span title="Placeholder text and images are temporary pieces of content used in design and development to represent the final content before it&#39;s ready.">placeholder</span>
+      content.</p>
+    <figure>
+      <img src="./WDD 131 _ Layout Review4_files/layoutreview-task.png" alt="HTML and CSS Layout Review Screenshot" width="700">
+      <figcaption>HTML and CSS Layout Review Screenshot</figcaption>
+    </figure>
+
+    <details>
+      <summary>Associated Course Learning Outcome</summary>
+      <p>Develop responsive web pages that follow best practices and use valid HTML and CSS.</p>
+    </details>
+
+    <h3>Prepare</h3>
+    <ul>
+      <li><strong>Watch</strong>: The holy grail layout demonstration video (7:45-10:03) ▶️ <a href="https://youtu.be/qm0IfG1GyZU?t=465" target="_blank" rel="noopener">10 Modern Layouts</a> – Google
+        Chrome
+        Developers &amp;ndash [ 2.5 minutes ]
+        <div class="callout info">
+          <p>This CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/abexdNP" target="_blank" rel="noopener">Holy Grail
+              Layout – Google WebDev</a> supports the coding exercise in the video segment.</p>
+        </div>
+      </li>
+
+      <li><strong>Review</strong>: CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/YzmMwWz" target="_blank" rel="noopener">Navigation Menu using CSS Flex</a>
+      </li>
+    </ul>
+
+    <h3>Activity Instructions</h3>
+    <div class="callout info">
+      <p>This activity has an associated Audit Report to assist your development.</p>
+    </div>
+    <h4 class="step">File and Folder Setup</h4>
+    <figure class="floatright">
+      <img src="./WDD 131 _ Layout Review4_files/layout-file-structure.png" alt="Example Screenshot of File and Folder Setup in VS Code" loading="lazy" width="350">
+      <figcaption>Screenshot of File Structure</figcaption>
+    </figure>
+    <ol>
+      <li>In VS Code, add a new subfolder named "<strong>week01</strong>" within your <code>wdd131</code> local
+        repository folder.
+      </li>
+      <li>Add a file named "<strong>basic-layout.html</strong>" to the <code>week01</code> folder.
+      </li>
+      <li>Add a new subfolder within the <code>week01</code> folder named "<strong>styles</strong>".</li>
+      <li>Create a supporting, external CSS file named "<strong>layout.css</strong>" and place it
+        in the <code>styles</code> folder.</li>
+    </ol>
+    <h4 class="step">HTML</h4>
+    <ol>
+      <li>In the <code>basic-layout.html</code> file, use semantic HTML to support the given layout.
+        <div class="callout info">
+          <p>
+            Consider using an <strong>Emmet</strong> shortcut in VS
+            Code by typing <code>html5</code> or just an <code>!</code> and then hit the tab key on a blank
+            screen in the HTML document. This action will build a core HTML structure.
+          </p>
+        </div>
+      </li>
+      <li>Ensure that your navigation container element is contained <strong>within</strong> the <code>header</code>
+        element.</li>
+      <li>Include the placeholder content (e.g., "Header Content", etc).</li>
+      <li>Link the external CSS file.</li>
+      <li>Always use appropriate <code>title</code> content. In this assignment, include your name and WDD 131.</li>
+    </ol>
+    <h4 class="step">CSS</h4>
+    <ol>
+      <li>Use CSS Grid on the body of the document to support the given layout.
+        <div class="callout warning">
+          <p>Typically you should avoid using Grid on the <code>&lt;body&gt;</code> element because it would be
+            harder to override styles for specific sections and because of maintainability with more complex layouts.
+            If you need to use Grid on the <code>&lt;body&gt;</code> element, consider using a separate container
+            element for the body and then applying Grid to that container. This activity's website has a straightforward
+            structure with clearly defined sections, so using Grid on the <code>&lt;body&gt;</code> is an efficient
+            choice.</p>
+        </div>
+
+      </li>
+      <li>Use CSS Flex on the navigation menu.</li>
+      <li>The color schema and font family choices are yours to make.</li>
+
+    </ol>
+    <h4 class="step">Test Page</h4>
+    <ol>
+      <li>Check your work by loading your page into your browser using <strong>Live/Five Server</strong> through VS
+        Code.
+      </li>
+      <li><strong>Validate</strong> your HTML and CSS.</li>
+      <li>Use <strong>DevTools Lighthouse</strong> for a deeper dive into your page's performance, accessibility, and
+        adherence to best practices.
+        <div class="callout info">
+          <p>
+            "DevTools" is an abbreviation for "Developer Tools." It refers to a set of tools or utilities provided by
+            web browsers to help developers debug, profile, and analyze web pages during the development process. The
+            tools are typically accessed by pressing the F12 function key or selecting the menu option for the browser's
+            developer tools. <br> – <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools" target="_blank" rel="noopener">What are browser developer tools?</a> – MDN</p>
+        </div>
+      </li>
+    </ol>
+
+    <h3>Check Your Understanding</h3>
+    <ol>
+      <li>Commit and push your work to your GitHub Pages repository.</li>
+      <li>Wait a few minutes for the server to update, then check the render of your page in a browser.
+        <details>
+          <summary>
+            What is the GitHub Pages enabled URL to your page?
+          </summary>
+          <pre><code class="hljs language-bash">https://yourgithubusername.github.io/wdd131/week01/basic-layout.html</code></pre>
+        </details>
+        Does it look like the example screenshot above? If not, make corrections and push your changes.
+      </li>
+      <li>Discuss issues with your peers and the instructor in the Microsoft Teams <strong>Week 01 Forum</strong> channel.</li>
+      <li>Continue to make corrections and adjustments as needed and remember to commit and push your changes.</li>
+    </ol>
+
+    <hr>
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01/index.html">Week 01 Home</a></span>
+    </nav>
+
+  </main>
+
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 131 _ Layout Review4_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+
+
+</body></html>

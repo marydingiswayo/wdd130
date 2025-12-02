@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://byui-cse.github.io/cse111-ww-course/week03/project.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 111 | Project: Water Pressure</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program-pt/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./CSE 111 _ Project_ Water Pressure_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./CSE 111 _ Project_ Water Pressure_files/course.css">
+  <link rel="stylesheet" href="./CSE 111 _ Project_ Water Pressure_files/math.css">
+  <link rel="stylesheet" href="./CSE 111 _ Project_ Water Pressure_files/vs2015.min.css">
+  <script type="text/javascript" src="./CSE 111 _ Project_ Water Pressure_files/620f7e0f8d21af1a_complete.js.download" crossorigin="anonymous"></script>
+  <script src="./CSE 111 _ Project_ Water Pressure_files/highlightjs-copy.min.js.download"></script>
+  <link rel="stylesheet" href="./CSE 111 _ Project_ Water Pressure_files/highlightjs-copy.min.css">
+<style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 111<span id="coursetitle">: Programming with Functions</span></h1>
+      <img src="./CSE 111 _ Project_ Water Pressure_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav id="autogen-top-nav">
+      <!-- This nav is auto-generated -->
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/index.html">Home</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week01/index.html">W1</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week02/index.html">W2</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/cse111-ww-course/week03/index.html">W3</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week04/index.html">W4</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week05/index.html">W5</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week06/index.html">W6</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week07/index.html">W7</a></span>
+      <!-- end auto-generated -->
+    </nav>
+    <h2>W03 Project: Water Pressure</h2>
+    <h3 id="purpose">Purpose</h3>
+    <p>Prove that you can write and run test functions to help you find and fix mistakes in a Python program.</p>
+    <h3>Project</h3>
+    <div class="callout error">
+      <p><strong>Do not use AI to generate the code for this program.</strong></p>
+      <p>Using AI to generate this program is a violation of the course AI policy and may result in receiving a 0 on the assignment, failing the course, or being removed from the program.</p>
+      <p>If you need help on the assignment or have questions about AI use, please ask your instructor.</p>
+    </div>
+    <p>Your town needs a volunteer to finish writing and testing a computer program that will be used to help design a
+      new drinking water system.</p>
+    <h4>Background</h4>
+    <p>The small town you live in has received a grant to build and install a freshwater supply system for your
+      community. This will bring great benefit to your community, providing clean water for all. The grant will cover
+      the cost of materials but not the labor to do the job. The city has assembled volunteers to help design and
+      install this new water system.</p>
+    <p>The team has decided to build an elevated water tank and install a pump that pushes water up to the tank where
+      the water is stored. When a person opens a water faucet, water runs from the tank through pipes to the faucet.
+      Earth’s gravity pulling on the water in the elevated tank pressurizes the water and causes it to flow from the
+      faucet.</p>
+    <figure>
+      <img src="./CSE 111 _ Project_ Water Pressure_files/water_distrib_system.png" alt="A diagram of a city water distribution system that stores
+        water in an elevated tank" title="A diagram of a city water distribution system that stores
+        water in an elevated tank">
+      <figcaption>A diagram of a city water distribution system that stores water in an elevated tank</figcaption>
+    </figure>
+    <p>The team must design the system and ensure water will flow to all buildings. To accomplish this the designer must
+      choose the tower height, pipe type, pipe diameter, and pipe path. </p>
+    <p>A computer program was written by a volunteer to help with the design, but when the team started to use the
+      program, the numbers didn't seem to be correct. The original programmer is not available to fix the program so you
+      have been asked to help out. Your task is to find out why the program is not working correctly, fix it, and prove
+      that you fixed it. To do this you will need to write unit tests to prove the functions operate according to
+      specifications.</p>
+    <h4 id="assign">Requirements</h4>
+    <p>The following functions need to be fixed and validated.</p>
+    <ol>
+      <li>
+        <h5>Water Column Height</h5>
+        <p>
+        </p><pre>def water_column_height(tower_height, tank_height):</pre>
+        <p></p>
+        <div class="block formula"><var>h</var> = <var>t</var> +
+          <div class="fract">
+            <div>3<var>w</var></div>
+            <div>4</div>
+          </div>
+        </div>
+        <details open="">
+          <summary>Formula details:</summary>
+          <p>Use the following formula details to calculate the function's return value.</p>
+          <ul>
+            <li>
+              <div><var>h</var> is height of the water column</div>
+            </li>
+            <li>
+              <div><var>t</var> is the height of the tower (<code>tower_height</code>)</div>
+            </li>
+            <li>
+              <div><var>w</var> is the height of the walls of the tank
+                that is on top of the tower (<code>tank_height</code>)</div>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <h5>Pressure gain from height</h5>
+        <p>
+        </p><pre>def pressure_gain_from_water_height(height):</pre>
+        <p></p>
+        <div class="block formula"><var>P</var> = <div class="fract">
+            <div><var>ρ</var><var>g</var><var>h</var></div>
+            <div>1000</div>
+          </div>
+        </div>
+        <details open="">
+          <summary>Formula details:</summary>
+          <p>Use the following formula details to calculate the function's return value.</p>
+          <ul>
+            <li>
+              <div><var>P</var> is the pressure in
+                <span class="units">kilopascals</span>
+              </div>
+            </li>
+            <li>
+              <div><var>ρ</var> is the density of water 998.2 (<span class="units">kilogram / meter<sup>3</sup></span>)
+              </div>
+            </li>
+            <li>
+              <div><var>g</var> is the acceleration from Earths gravity 9.80665<span class="units"> (meter /
+                  second<sup>2</sup></span>)</div>
+            </li>
+            <li>
+              <div><var>h</var> is the height of the water column in<span class="units">meters</span>
+                (<code>height</code>)</div>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <h5></h5>
+        <p>
+        </p><pre>def pressure_loss_from_pipe(pipe_diameter, pipe_length, friction_factor, fluid_velocity):</pre>
+        <p></p>
+        <div class="block formula"><var>P</var> = <div class="fract">
+            <div>− <var>f</var> <var>L</var> <var>ρ</var> <var>v</var><sup>2</sup>
+            </div>
+            <div>2000 <var>d</var></div>
+          </div>
+        </div>
+        <details>
+          <summary>Formula details:</summary>
+          <p>Use the following formula details to calculate the function's return value.</p>
+          <ul>
+            <li>
+              <div><var>P</var> is the lost pressure in
+                <span class="units">kilopascals</span>
+              </div>
+            </li>
+            <li>
+              <div><var>f</var> is the pipe’s friction factor (<code>friction_factor</code>)</div>
+            </li>
+            <li>
+              <div><var>L</var> is the length of the pipe in <span class="units">meters
+                  (<code>pipe_length</code>)</span></div>
+            </li>
+            <li>
+              <div><var>ρ</var> is the density of water 998.2 (<span class="units">kilogram / meter<sup>3</sup></span>)
+              </div>
+            </li>
+            <li>
+              <div><var>v</var> is the velocity of the water flowing through the pipe in <span class="units">meters /
+                  second (<code>fluid_velocity</code>)</span></div>
+            </li>
+            <li>
+              <div><var>d</var> is the diameter of the pipe in <span class="units">meters
+                  (<code>pipe_diameter</code>)</span></div>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <h5>Pressure loss from fittings</h5>
+        <p>
+        </p><pre>def pressure_loss_from_fittings(fluid_velocity, quantity_fittings):</pre>
+        <p></p>
+        <div class="block formula">
+          <var>P</var> =
+          <div class="fract">
+            <div>−0.04 <var>ρ</var> <var>v</var><sup>2</sup> <var>n</var></div>
+            <div>2000 </div>
+          </div>
+        </div>
+        <details>
+          <summary>Formula details:</summary>
+          <p>Use the following formula details to calculate the function's return value.</p>
+          <ul>
+            <li>
+              <div><var>P</var> is the lost pressure in <span class="units">kilopascals</span></div>
+            </li>
+            <li>
+              <div><var>ρ</var> is the density of water (998.2 <span class="units">kilogram / meter<sup>3</sup></span>)
+              </div>
+            </li>
+            <li>
+              <div><var>v</var> is the velocity of the water flowing through the pipe in <span class="units">meters /
+                  second</span> (<code>fluid_velocity</code>)</div>
+            </li>
+            <li>
+              <div><var>n</var> is the quantity of fittings (<code>quantity_fittings</code>)</div>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <h5>Reynolds Number</h5>
+        <p>
+        </p><pre>def reynolds_number(hydraulic_diameter, fluid_velocity):</pre>
+        <p></p>
+        <div class="block formula">
+          <var>R</var> =
+          <div class="fract">
+            <div><var>ρ</var><var>d</var><var>v</var></div>
+            <div><var>μ</var></div>
+          </div>
+        </div>
+        <details>
+          <summary>Formula details:</summary>
+          <p>Use the following formula details to calculate the function's return value.</p>
+          <ul>
+            <li>
+              <div><var>R</var> is the Reynolds number</div>
+            </li>
+            <li>
+              <div><var>ρ</var> is the density of water (998.2 <span class="units">kilogram / meter<sup>3</sup></span>)
+              </div>
+            </li>
+            <li>
+              <div><var>d</var> is the hydraulic diameter of a pipe in <span class="units">meters</span>. For a round
+                pipe, the hydraulic diameter is the same as the pipe’s inner diameter. (<code>hydraulic_diameter</code>)
+              </div>
+            </li>
+            <li>
+              <div><var>v</var> is the velocity of the water flowing through the pipe in <span class="units">meters /
+                  second</span> (<code>fluid_velocity</code>)</div>
+            </li>
+            <li>
+              <div><var>μ</var> is the dynamic viscosity of water (0.0010016 <span class="units">Pascal seconds</span>)
+              </div>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <h5>Pressure loss from pipe reduction</h5>
+        <p>
+        </p><pre>def pressure_loss_from_pipe_reduction(larger_diameter, fluid_velocity, reynolds_number, smaller_diameter):</pre>
+        <p></p>
+        <div class="block formula">
+          <var>k</var> =
+          <div class="paren two">
+            0.1 +
+            <div class="fract">
+              <div>50</div>
+              <div>R</div>
+            </div>
+             
+          </div>
+          <div class="paren two">
+            <div class="paren two">
+               
+              <div class="fract">
+                <div>D</div>
+                <div>d</div>
+              </div>
+               
+            </div>
+            <sup class="two">4</sup> − 1
+          </div>
+        </div>
+        <div class="block formula">
+          <var>P</var> =
+          <div class="fract">
+            <div>− <var>k</var> <var>ρ</var> <var>v</var><sup>2</sup></div>
+            <div>2000 </div>
+          </div>
+        </div>
+        <details>
+          <summary>Formula details:</summary>
+          <p>Use the following formula details to calculate the function's return value.</p>
+          <ul>
+            <li>
+              <div><var>k</var> is a constant computed by the first formula and used in the second formula</div>
+            </li>
+            <li>
+              <div><var>R</var> is the Reynolds number that corresponds to the pipe with the larger diameter
+                (<code>reynolds_number</code>)</div>
+            </li>
+            <li>
+              <div><var>D</var> is the diameter of the larger pipe in <span class="units">meters</span>
+                (<code>larger_diameter</code>)</div>
+            </li>
+            <li>
+              <div><var>d</var> is the diameter of the smaller pipe in <span class="units">meters</span>
+                (<code>smaller_diameter</code>)</div>
+            </li>
+            <li>
+              <div><var>P</var> is the lost pressure <span class="units">kilopascals</span></div>
+            </li>
+            <li>
+              <div><var>ρ</var> is the density of water (998.2 <span class="units">kilogram / meter<sup>3</sup></span>)
+              </div>
+            </li>
+            <li>
+              <div><var>v</var> is the velocity of the water flowing through the larger diameter pipe in <span class="units">meters / second</span> (<code>fluid_velocity</code>)</div>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ol>
+
+
+
+    <h5>Helpful information.</h5>
+    <ul class="mixed long">
+      <li class="tutorial">
+        <div>The <a href="https://byui-cse.github.io/cse111-ww-course/week03/prepare-1.html">preparation content</a> for this lesson explains how to use
+          <code>pytest</code>, <code>assert</code>, and <code>approx</code> to automatically verify that functions are
+          correct. It also contains an <a href="https://byui-cse.github.io/cse111-ww-course/week03/prepare-1.html#example">example test function</a> and links to
+          additional documentation about <code>pytest</code>.
+        </div>
+      </li>
+      <li class="reference">
+        <p>The <a href="https://docs.pytest.org/en/7.1.x/reference/reference.html#pytest-approx"><code>pytest</code>
+            <code>approx</code> function</a> accepts optional named arguments. One of those named arguments is
+          <var>abs</var>. The <var>abs</var> named argument causes the <code>approx</code> function to compare the
+          actual and expected values up to a specified digit after the decimal point and to ignore the following digits.
+          For example, the following two lines of code cause pytest to compare the actual number returned from
+          <code>pressure_loss_from_fittings</code> to −0.306 to only the third digit after the decimal point and
+          to ignore all digits in the actual number after the 6.
+        </p>
+        <div>
+          <pre class="hljs-copy-wrapper"> <code class="language-python hljs" data-no-copy="" data-highlighted="yes"><span class="hljs-keyword">assert</span> pressure_loss_from_fittings(<span class="hljs-number">1.75</span>, <span class="hljs-number">5</span>) == approx(-<span class="hljs-number">0.306</span>, <span class="hljs-built_in">abs</span>=<span class="hljs-number">0.001</span>)</code><div class="hljs-copy-container" data-autohide="false" style="--hljs-theme-background: rgb(30, 30, 30); --hljs-theme-color: rgb(220, 220, 220); --hljs-theme-padding: 12px;"><button class="hljs-copy-button" data-copied="false">Copy</button></div></pre>
+        </div>
+        <p>Notice in the previous example, that the value for <var>abs</var> is 0.001, which causes the approx function
+          to ignore all digits after the third digit after the decimal point.</p>
+      </li>
+      <li class="video">
+        <div>This
+          <a href="https://video.byui.edu/media/t/1_9ickss60">video about test functions</a> <span class="duration">(20
+            minutes)</span> shows a BYU-Idaho faculty member writing two test functions and using <code>pytest</code> to
+          run them.
+        </div>
+      </li>
+    </ul>
+    <h3 id="milestone">Milestone</h3>
+    <p>Begin fixing and testing the <strong><code>water_flow.py</code></strong> program which was created by another
+      person. For this milestone you will write test functions to test three of the functions in
+      <strong><code>water_flow.py</code></strong>. You will use the results of the tests to identify problems that you
+      will fix.
+    </p>
+    <div class="callout error">
+      <div class="callout-title">Errors:</div>
+      <p>You will find errors in the provided code. Some functions work, some have errors, and some are not yet
+        implemented. If a test fails it could be one of two reasons, either the function is not implemented correctly,
+        or the test is not implemented correctly. You will have to figure out which one and fix where needed.</p>
+    </div>
+    <ol>
+      <li>Create a folder for this week's project, name it whatever you want.</li>
+      <li>Download the <a href="https://byui-cse.github.io/cse111-ww-course/week03/data/water_flow.py" download="waterflow.py">waterflow.py</a> program and save it in
+        the folder you created.</li>
+      <li>Open the folder you just created in VSCode.</li>
+      <li>Create a file named <code>test_water_flow.py</code> in your project directory.</li>
+      <li>Add the following import statements at the top of your test_water_flow.py file.
+        <pre class="hljs-copy-wrapper"><code class="language-python nohljsln hljs" data-highlighted="yes"><span class="hljs-keyword">from</span> pytest <span class="hljs-keyword">import</span> approx
+<span class="hljs-keyword">import</span> pytest</code><div class="hljs-copy-container" data-autohide="false" style="--hljs-theme-background: rgb(30, 30, 30); --hljs-theme-color: rgb(220, 220, 220); --hljs-theme-padding: 12px;"><button class="hljs-copy-button" data-copied="false">Copy</button></div></pre>
+      </li>
+      <li>
+        <div>Copy and paste the following code at the bottom of your <code>test_water_flow.py</code> file.
+          <pre class="hljs-copy-wrapper"><code class="language-python nohljsln hljs" data-highlighted="yes"><span class="hljs-comment"># Call the main function that is part of pytest so that the</span>
+<span class="hljs-comment"># computer will execute the test functions in this file.</span>
+pytest.main([<span class="hljs-string">"-v"</span>, <span class="hljs-string">"--tb=line"</span>, <span class="hljs-string">"-rN"</span>, __file__])</code><div class="hljs-copy-container" data-autohide="false" style="--hljs-theme-background: rgb(30, 30, 30); --hljs-theme-color: rgb(220, 220, 220); --hljs-theme-padding: 12px;"><button class="hljs-copy-button" data-copied="false">Copy</button></div></pre>
+        </div>
+      </li>
+      <li>
+        <div>In your <code>test_water_flow.py</code> file, write a test function named
+          <code>test_water_column_height</code>. This test function must call <code>water_column_height</code> at least
+          four times to verify that it is working correctly. Use the following numbers in your test function.
+          <table class="center test">
+            <thead>
+              <tr>
+                <th>Tower<br>Height</th>
+                <th>Tank Wall<br>Height</th>
+                <th class="expect">Expected Water<br>Column Height</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0<span class="hidden">.0</span></td>
+                <td>0<span class="hidden">.0</span></td>
+                <td class="expect">0<span class="hidden">.0</span></td>
+              </tr>
+              <tr>
+                <td>0<span class="hidden">.0</span></td>
+                <td>10<span class="hidden">.0</span></td>
+                <td class="expect">7.5</td>
+              </tr>
+              <tr>
+                <td>25<span class="hidden">.0</span></td>
+                <td>0<span class="hidden">.0</span></td>
+                <td class="expect">25<span class="hidden">.0</span></td>
+              </tr>
+              <tr>
+                <td>48.3</td>
+                <td>12.8</td>
+                <td class="expect">57.9</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout info">
+          <div class="callout-title"><strong>Tips:</strong></div>
+          <ul>
+            <li>Don't forget to import the function from <code>water_flow.py</code></li>
+            <li>Write one test at a time, test it then move on.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div>In your <code>test_water_flow.py</code> file, write a test function named
+          <code>test_pressure_gain_from_water_height</code>. This test function must call
+          <code>pressure_gain_from_water_height</code> at least three times to verify that it is working correctly. Use
+          the following numbers in your test function.
+          <table class="center test">
+            <thead>
+              <tr>
+                <th>Height</th>
+                <th class="expect">Expected<br>Pressure</th>
+                <th><code>approx</code><br>Absolute<br>Tolerance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0<span class="hidden">.0</span></td>
+                <td class="expect">0<span class="hidden">.000</span></td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>30.2</td>
+                <td class="expect">295.628</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>50<span class="hidden">.0</span></td>
+                <td class="expect">489.450</td>
+                <td>0.001</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <div>In your <code>test_water_flow.py</code> file, write a test function named
+          <code>test_pressure_loss_from_pipe</code>. This test function must call <code>pressure_loss_from_pipe</code>
+          at least seven times to verify that it is working correctly. Use the following numbers in your test function.
+          <table class="center test">
+            <thead>
+              <tr>
+                <th>Pipe<br>Diameter</th>
+                <th>Pipe<br>Length</th>
+                <th>Friction<br>Factor</th>
+                <th>Fluid<br>Velocity</th>
+                <th class="expect">Expected<br>Pressure<br>Loss</th>
+                <th><code>approx</code><br>Absolute<br>Tolerance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0.048692</td>
+                <td>0<span class="hidden">.00</span></td>
+                <td>0.018</td>
+                <td>1.75</td>
+                <td class="expect">0<span class="hidden">.000</span></td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>0.048692</td>
+                <td>200<span class="hidden">.00</span></td>
+                <td>0<span class="hidden">.000</span></td>
+                <td>1.75</td>
+                <td class="expect">0<span class="hidden">.000</span></td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>0.048692</td>
+                <td>200<span class="hidden">.00</span></td>
+                <td>0.018</td>
+                <td>0<span class="hidden">.00</span></td>
+                <td class="expect">0<span class="hidden">.000</span></td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>0.048692</td>
+                <td>200<span class="hidden">.00</span></td>
+                <td>0.018</td>
+                <td>1.75</td>
+                <td class="expect">-113.008</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>0.048692</td>
+                <td>200<span class="hidden">.00</span></td>
+                <td>0.018</td>
+                <td>1.65</td>
+                <td class="expect">-100.462</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>0.28687<span class="hidden">0</span></td>
+                <td>1000<span class="hidden">.00</span></td>
+                <td>0.013</td>
+                <td>1.65</td>
+                <td class="expect">-61.576</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>0.28687<span class="hidden">0</span></td>
+                <td>1800.75</td>
+                <td>0.013</td>
+                <td>1.65</td>
+                <td class="expect">-110.884</td>
+                <td>0.001</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>Run your <strong><code>test_water_flow.py</code></strong> file and ensure that all three of the test functions
+        pass. </li>
+    </ol>
+    <h4>Milestone Submission</h4>
+    <p>On or before the due date, return to <a href="https://byupw.instructure.com/calendar#view_name=agenda">Canvas</a>
+      and report your progress on this milestone.</p>
+    <h3 id="project-completion">Project Completion</h3>
+    <p>Finish your project by completing the remaining test functions and correcting any errors discovered.</p>
+    <ol>
+      <li>
+        <div>
+          In your <code>test_water_flow.py</code> file, write a test function named
+          <code>test_pressure_loss_from_fittings</code>. This test
+          function must call <code>pressure_loss_from_fittings</code> at least five times to verify that it is working
+          correctly. Use the following
+          numbers in your test function.
+          <table class="center test">
+            <thead>
+              <tr>
+                <th>Fluid<br>Velocity</th>
+                <th>Quantity<br>of Fittings</th>
+                <th class="expect">Expected<br>Pressure<br>Loss</th>
+                <th><code>approx</code><br>Absolute<br>Tolerance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0<span class="hidden">.00</span></td>
+                <td>3</td>
+                <td class="expect">0<span class="hidden">.000</span></td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>1.65</td>
+                <td>0</td>
+                <td class="expect">0<span class="hidden">.000</span></td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>1.65</td>
+                <td>2</td>
+                <td class="expect">-0.109</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>1.75</td>
+                <td>2</td>
+                <td class="expect">-0.122</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>1.75</td>
+                <td>5</td>
+                <td class="expect">-0.306</td>
+                <td>0.001</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <div>
+          In your <code>test_water_flow.py</code> file, write a test function named <code>test_reynolds_number</code>.
+          This test function must call
+          <code>reynolds_number</code> at least five times to verify that it is working correctly. Use the following
+          numbers in your test function.
+          <table class="center test">
+            <thead>
+              <tr>
+                <th>Hydraulic<br>Diameter</th>
+                <th>Fluid<br>Velocity</th>
+                <th class="expect">Expected<br>Reynolds<br>Number</th>
+                <th><code>approx</code><br>Absolute<br>Tolerance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0.048692</td>
+                <td>0<span class="hidden">.00</span></td>
+                <td class="expect">0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0.048692</td>
+                <td>1.65</td>
+                <td class="expect">80069</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0.048692</td>
+                <td>1.75</td>
+                <td class="expect">84922</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0.28687<span class="hidden">0</span></td>
+                <td>1.65</td>
+                <td class="expect">471729</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0.28687<span class="hidden">0</span></td>
+                <td>1.75</td>
+                <td class="expect">500318</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <div>
+          In your <code>test_water_flow.py</code> file, write a test function named
+          <code>test_pressure_loss_from_pipe_reduction</code>. This test
+          function must call <code>pressure_loss_from_pipe_reduction</code> at least three times to verify that it is
+          working correctly. Use the
+          following numbers in your test function.
+          <table class="center test">
+            <thead>
+              <tr>
+                <th>Larger<br>Diameter</th>
+                <th>Fluid<br>Velocity</th>
+                <th>Reynolds<br>Number</th>
+                <th>Smaller<br>Diameter</th>
+                <th class="expect">Expected<br>Pressure<br>Loss</th>
+                <th><code>approx</code><br>Absolute<br>Tolerance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0.28687</td>
+                <td>0<span class="hidden">.00</span></td>
+                <td>1</td>
+                <td>0.048692</td>
+                <td class="expect">0<span class="hidden">.000</span></td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>0.28687</td>
+                <td>1.65</td>
+                <td>471729</td>
+                <td>0.048692</td>
+                <td class="expect">-163.744</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>0.28687</td>
+                <td>1.75</td>
+                <td>500318</td>
+                <td>0.048692</td>
+                <td class="expect">-184.182</td>
+                <td>0.001</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+    </ol>
+    <h4 id="testing">Testing Procedure</h4>
+    <p>Verify that your test program works correctly by following each step in this procedure:</p>
+    <ol class="test">
+      <li>
+        <div>
+          Run your <code>test_water_flow.py</code> file and ensure that all six of the test functions pass. If any of
+          the test functions don’t pass,
+          there is a mistake in either the program function that you wrote or the test function that you wrote. Read the
+          output from
+          <code>pytest</code>, fix the mistake, and run the <code>test_water_flow.py</code> file again until all the
+          test functions pass.
+          <pre class="console">&gt; python test_water_flow.py
+========================== test session starts ==========================
+platform win32 -- Python 3.11.1, pytest-7.2.1, pluggy-1.0.0 --
+rootdir: C:\Users\cse111\week03
+collected 3 items
+test_water_flow.py::test_water_column_height <span class="pass">PASSED                [ 16%]</span>
+test_water_flow.py::test_pressure_gain_from_water_height <span class="pass">PASSED    [ 33%]</span>
+test_water_flow.py::test_pressure_loss_from_pipe <span class="pass">PASSED            [ 50%]</span>
+test_water_flow.py::test_pressure_loss_from_fittings <span class="pass">PASSED        [ 66%]</span>
+test_water_flow.py::test_reynolds_number <span class="pass">PASSED                    [ 83%]</span>
+test_water_flow.py::test_pressure_loss_from_pipe_reduction <span class="pass">PASSED  [100%]</span>
+<span class="pass">=========================== 3 passed in 0.08s ===========================</span></pre>
+        </div>
+      </li>
+      <li>
+        <div>
+          Run your finished <code>water_flow.py</code> program. Enter the input shown below and ensure that your program
+          prints the output shown
+          below.
+          <pre class="console">Height of water tower (meters): <span class="input">36.6</span>
+Height of water tank walls (meters): <span class="input">9.1</span>
+Length of supply pipe from tank to lot (meters): <span class="input">1524.0</span>
+Number of 90° angles in supply pipe: <span class="input">3</span>
+Length of pipe from supply to house (meters): <span class="input">15.2</span>
+Pressure at house: 158.7 kilopascals
+</pre>
+        </div>
+      </li>
+    </ol>
+
+    <h4>Exceeding the Requirements</h4>
+    <p>If your program fulfills the requirements for this assignment as described above, your program will earn 93% of
+      the possible points. In order to earn the remaining 7% of points, you will need to add one or more features to
+      your program so that it exceeds the requirements. Use your creativity to add features. Add a comment to the top of
+      your code that explains your enhancement(s). Here are a few suggestions for additional features.</p>
+    <ul>
+      <li>
+        <div>
+          Inside the functions of your <code>water_flow.py</code>
+          program, you may have typed numbers for Earth’s acceleration of gravity, the density of water, and the dynamic
+          viscosity of water. Instead
+          of using the numbers inside your functions, define the following constants outside your functions. Then use
+          the constant names in place of
+          the numbers inside your functions.
+          <table class="center">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>EARTH_ACCELERATION_OF_GRAVITY</td>
+                <td class="number">9.80665<span class="hidden">00</span></td>
+              </tr>
+              <tr>
+                <td>WATER_DENSITY</td>
+                <td class="number">998.2<span class="hidden">000000</span></td>
+              </tr>
+              <tr>
+                <td>WATER_DYNAMIC_VISCOSITY</td>
+                <td class="number">0.0010016</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <div>
+          The functions that you wrote for this assignment, calculate water pressure in kilopascals (kPa). In the United
+          States, water pressure is
+          usually expressed in pounds per square inch (psi). Write a function in your <code>water_flow.py</code>
+          program that converts kPa to psi. Then at the bottom of your
+          <code>main</code> function, add code that calls your conversion function and prints the final pressure value
+          in both kPa and psi.
+        </div>
+      </li>
+      <li>
+        <div>
+          Add a test function to your <code>test_water_flow.py</code> file that verifies that your psi-from-kPa
+          conversion function works correctly.
+          In your test function, call your conversion function multiple times so that your test function is a rigorous
+          test.
+        </div>
+      </li>
+    </ul>
+    <div class="callout warning">
+      <div class="callout-title">Document your enhancements:</div>
+      <p>If you choose to "exceed requirements" place a comment at the top of your code file that describes what you did
+        to enhance your program.</p>
+    </div>
+
+    <h4>Project Submission</h4>
+    <p>Return to <a href="https://byupw.instructure.com/calendar#view_name=agenda">Canvas</a> and upload your
+      <code>water_flow.py</code> and <code>test_water_flow.py</code> files for feedback.
+    </p>
+    <div class="callout error">
+      <div class="callout-title">Don't get a zero!</div>
+      <p>If an error prevents your program from running to completion the grader will score your
+        assignment with a 0 and request that you fix and resubmit your program. In other words, rather than submitting a
+        program that doesn't work, it's best to ask for help to understand how to fix the problem before submitting your
+        program.</p>
+    </div>
+    <h3>Useful Links:</h3>
+    <ol>
+      <li>Return to: <a href="https://byui-cse.github.io/cse111-ww-course/week03/index.html">Week Overview</a> | <a href="https://byui-cse.github.io/cse111-ww-course/index.html">Course Home</a></li>
+    </ol>
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./CSE 111 _ Project_ Water Pressure_files/highlight.min.js.download"></script>
+  <script src="./CSE 111 _ Project_ Water Pressure_files/highlightjs-line-numbers.min.js.download"></script>
+  <script>
+    hljs.highlightAll();
+    hljs.addPlugin(
+      new CopyButtonPlugin({
+        autohide: false, // Always show the copy button
+      })
+    );
+    hljs.initLineNumbersOnLoad();
+  </script>
+
+
+</body></html>

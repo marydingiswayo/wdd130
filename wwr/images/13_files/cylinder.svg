@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -0.6 22 31.2">
+<title>Diagram of a right circular cylinder with radius r and height h</title>
+<style>
+rect{fill:#fff}
+text{font:3.2px sans-serif;fill:#000}
+ellipse{stroke-width:0.2;stroke:#000;fill:none}
+path{stroke-width:0.2;stroke:#000;fill:none}
+</style>
+
+<rect x="-1" y="-0.6" width="22" height="31.2"/>
+<ellipse cx="10" cy="25" rx="10" ry="5"/>
+<path d="M0 5V25M20 5V25"/>
+<path d="M20 5H11V25H20" stroke-dasharray="1.6 1"/>
+<ellipse cx="10" cy="5" rx="10" ry="5"/>
+<text x="12" y="16">h</text>
+<text x="14" y="24">r</text>
+</svg>

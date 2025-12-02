@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://byui-cse.github.io/wdd131-ww-course/week01/prepare-javascript-introduction.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | JavaScript Introduction</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 131 _ JavaScript Introduction3_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 131 _ JavaScript Introduction3_files/course.css">
+  <link rel="stylesheet" href="./WDD 131 _ JavaScript Introduction3_files/vs2015.min.css">
+
+  <script src="./WDD 131 _ JavaScript Introduction3_files/ca896ddec2fd3e19_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="./WDD 131 _ JavaScript Introduction3_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/">Home</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week02/">W2</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W01 Learning Activity: Introduction to JavaScript</h2>
+
+    <h3>Overview</h3>
+    <p>
+      JavaScript is a popular, well-supported programming language used to create interactive and dynamic web pages,
+      mobile apps, desktop applications and more. It is a high-level, interpreted language that is designed to run in
+      web browsers and it can also be used on the server-side with the help of technologies like Node.js.
+    </p>
+    <p>In this class you will learn to apply your prerequisite, programming knowledge to the web using JavaScript.
+      This language uses the same principles and common control structures as other programming languages such as Python
+      and C#.</p>
+
+    <div class="callout info">
+      <p>
+        JavaScript is one of the three core technologies of web frontend development alongside HyperText Markup Language
+        (HTML) and
+        Cascading Styles Sheets (CSS).</p>
+      <ul>
+        <li>HTML defines the <strong>structure</strong> and meaning of a page.</li>
+        <li>CSS defines the style or <strong>presentation</strong> of a page.</li>
+        <li>JavaScript handles <strong>behavior</strong> based upon user interaction and other events.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>Associated Course Learning Outcomes</summary>
+      <p>
+      </p><ul>
+        <li>Demonstrate proficiency with JavaScript language syntax.</li>
+        <li>Use JavaScript to respond to events and dynamically modify HTML.</li>
+      </ul>
+      <p></p>
+    </details>
+
+    <h3>Activity Instructions</h3>
+
+    <p>Answer the following questions. You can use this MDN resource <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank" rel="noopener">What is JavaScript?</a> or use your own research.
+
+    </p><div class="callout ai">
+      <p>
+        You are encouraged to responsibly use contemporary language models and generative AI tools
+        like <a href="https://chat.openai.com/" target="_blank" rel="noopener">ChatGPT</a>, <a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini</a>, <a href="https://bard.google.com/chat" target="_blank" rel="noopener">Bard</a>, <a href="https://www.bing.com/search?q=Bing+AI&amp;showconv=1&amp;FORM=hpcodx" target="_blank" rel="noopener">Bing
+          Chat</a>, <a href="https://www.meta.ai/" target="_blank" rel="noopener">Meta AI</a>, etc. Learn to cautiously
+        use these tools as an on demand tutor to help define concepts, clarify questions, and to provide guidance.
+      </p>
+    </div>
+
+    <ul>
+      <li>What is the file extension used for JavaScript files?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="hljs language-undefined">.js</code></pre>
+        </details>
+      </li>
+      <li>How is JavaScript included on web pages?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>A <code>&lt;script&gt;</code> HTML tag is used to include JavaScript code in an HTML like this:
+          </p><pre><code class="html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+          The <code>script</code> tag can be used anywhere on the page.
+          <br> This course uses external script files and places the source reference in the <code>head</code> of the
+          HTML document.
+          <p></p>
+        </details>
+      </li>
+      <li>What standard way does this course reference JavaScript?
+        <ul class="check">
+          <li>Use external JavaScript files.</li>
+          <li>Place the .js JavaScript files in the <code>scripts</code> subfolder.</li>
+          <li>Reference the script file in the <code>head</code> of the HTML document.</li>
+          <li>Use the <code>defer</code> attribute to ensure that the HTML loads first in order for JavaScript to
+            interact with the HTML.
+          </li>
+        </ul>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  ...
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"scripts/myscripts.js"</span> <span class="hljs-attr">defer</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></code></pre>
+        </details>
+      </li>
+
+
+    </ul>
+
+    <p></p>
+
+    <h4>Common Misconceptions and Language Issues</h4>
+    <ul>
+      <li>
+        JavaScript is not the same programming language as the <a href="https://www.java.com/en/download/help/whatis_java.html" target="_blank" rel="noopener"><strong>Java</strong></a>
+        programming language. They are two different languages with different syntax and
+        purposes.
+      </li>
+
+      <li>
+        The plural form of "code" in programming is just "<strong>code</strong>", not "codes". <br>
+        <em>Example: "Please review my code." or "Please review my program". Not "Please review my
+          codes."</em>
+      </li>
+
+      <li>
+        JavaScript is not just for the browser and client-side scripting. With the
+        introduction of server-side frameworks like Node.js, JavaScript can be used for
+        server-side development as well. JavaScript is a mature language and has become more powerful
+        and versatile over time.
+      </li>
+    </ul>
+
+    <hr>
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01/index.html">Week 01 Home</a></span>
+    </nav>
+
+  </main>
+
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 131 _ JavaScript Introduction3_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+
+
+
+</body></html>

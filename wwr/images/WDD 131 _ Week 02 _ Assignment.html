@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://byui-cse.github.io/wdd131-ww-course/week02/assignment-02.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | Week 02 | Assignment</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 131 _ Week 02 _ Assignment_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 131 _ Week 02 _ Assignment_files/course.css">
+  <link rel="stylesheet" href="./WDD 131 _ Week 02 _ Assignment_files/vs2015.min.css">
+  <script src="./WDD 131 _ Week 02 _ Assignment_files/ca896ddec2fd3e19_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="./WDD 131 _ Week 02 _ Assignment_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01/">W1</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week02/">W2</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W02 Assignment: Picture Album</h2>
+
+    <h3>Overview</h3>
+    <p>This assignment applies the concepts presented in the learning activities to a picture
+      album page that is responsive in small and larger views. This page will utilize a
+      'hamburger' menu and respond to user requests.</p>
+
+    <details class="clo">
+      <summary>Associated Course Learning Outcomes</summary>
+      <p>
+        Develop responsive web pages that follow best practices and use valid HTML and CSS.<br>
+        Demonstrate proficiency with JavaScript language syntax. <br>Use JavaScript to respond to
+        events and dynamically modify HTML.
+      </p>
+    </details>
+
+    <h3>Task</h3>
+    <p>Design, develop, test, and then deploy a temple album page using your own selections of
+      temple pictures.
+    </p>
+
+    <figure>
+      <img src="./WDD 131 _ Week 02 _ Assignment_files/temples-small.png" alt="Example Picture Album Page Screenshot – Mobile" width="250">
+      <figcaption>Screenshot Example in Mobile View</figcaption>
+    </figure>
+    <figure>
+      <img src="./WDD 131 _ Week 02 _ Assignment_files/temples-large.png" alt="Example Picture Album Page Screenshot – Larger" width="500">
+      <figcaption>Screenshot Example in Larger View</figcaption>
+    </figure>
+
+
+    <details>
+      <summary>Demonstration of Responsive Behavior</summary>
+      <img src="./WDD 131 _ Week 02 _ Assignment_files/temples-res-menu.gif" alt="responsive example">
+      <!-- https://video.byui.edu/media/t/1_k8flfu6h -->
+    </details>
+
+    <h3>Instructions</h3>
+
+    <h4 class="step">File and Folder Setup</h4>
+    <ol>
+      <li>In VS Code, open the <strong>wdd131</strong> local repository folder.</li>
+      <li>Create a new file named "<strong>temples.html</strong>".</li>
+      <li>Add two CSS files named "<strong>temples.css</strong>" and "<strong>temples-large.css</strong>" to the
+        "styles" directory.</li>
+      <li>Add a JavaScript file named "<strong>temples.js</strong>" to the "scripts" directory.</li>
+    </ol>
+    <h4 class="step">HTML</h4>
+    <ol>
+      <li>In the <strong>temples.html</strong> document, include the standard HTML document and
+        <code>&lt;head&gt;</code> elements.
+        <div class="callout info">
+          <p>Refer to the <a href="https://byui-cse.github.io/wdd131-ww-course/resources/dev-standards.html" target="_blank" rel="noopener">development
+              standards</a> if you need a review.</p>
+        </div>
+      </li>
+      <li>Add links to the <strong>CSS</strong> files in the proper order to support mobile first dev.</li>
+      <li>Add a deferred <code>&lt;script&gt;</code> reference to the <strong>JavaScript</strong> file.</li>
+
+      <li>In the <code>&lt;body&gt;</code>, create a basic layout using a <strong>header</strong>, a
+        <code>main</code>, and a <strong>footer</strong> as main line elements.
+      </li>
+      <li>The <code>&lt;header&gt;</code> element contains:
+        <ul class="check">
+          <li>text that says "Temple Album"</li>
+          <li>a <code>&lt;nav&gt;</code> menu with the following text links:
+            <ul>
+              <li>Home</li>
+              <li>Old</li>
+              <li>New</li>
+              <li>Large</li>
+              <li>Small</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>The <code>&lt;main&gt;</code> element contains the following:
+        <ul class="check">
+          <li>an <code>&lt;h1&gt;</code> heading element</li>
+          <li>at least (9) <code>&lt;figure&gt;</code> elements with temple images and captions. Use the built-in figure
+            captions elements and name the temple
+            <div class="callout info">
+              <p>It is <strong>OK</strong> to have a single placeholder temple image at this point in the course.</p>
+            </div>
+          </li>
+        </ul>
+      </li>
+
+      <li>The <code>&lt;footer&gt;</code> contains the same dynamic and static information found on
+        your home page from last week.
+        <figure>
+          <img src="./WDD 131 _ Week 02 _ Assignment_files/common-footer.png" alt="Common Footer Screenshot Example">
+          <figcaption>Screenshot Example of Common Footer</figcaption>
+        </figure>
+      </li>
+    </ol>
+
+    <h4 class="step">CSS</h4>
+    <p>
+      Use the external <strong>temples.css</strong> and <strong>temples-large.css</strong> files to layout and style the
+      page as shown is the example screenshots. Your design must support a responsive view in mobile and larger views.
+    </p>
+    <div class="callout info">
+      <p>
+        The <strong>temples.css</strong> file is used for the mobile view and the <strong>temples-large.css</strong>
+        file is used for the larger view.<br>Most of your CSS should be located in the <strong>temples.css</strong> file
+        in
+        mobile first design.
+      </p>
+    </div>
+
+
+    <ol>
+      <li>Use your own color schema.
+        <div class="callout warning">
+          <p>
+            <strong>Please note:</strong> You are responsible to practice good design principles of alignment, color
+            contrast, proximity, repetition, and consistent white space.
+          </p>
+        </div>
+      </li>
+
+      <li>Use your own typography choice by using the <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts API</a> service to select one or two fonts to use on the page.
+        <div class="callout info">
+          <p>Video Demonstration: ▶️ <a href="https://www.youtube.com/watch?v=oZRAOWoDSfc" target="_blank" rel="noopener">Using Google Fonts</a> – <span class="smaller">[ 1:56 minutes ]</span>
+          </p>
+        </div>
+      </li>
+
+      <li>Use <strong>CSS Flex</strong> on the navigation <strong>nav</strong>.
+        <div class="callout info">
+          <p>
+            Video Demonstration: ▶️ <a href="https://video.byui.edu/media/t/1_b7w4k0v0" target="_blank" rel="noopener">CSS Flex Navigation Menu</a> – <span class="smaller">[ 7:58 minutes ]</span><br>
+            CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/RwXmpQN" target="_blank" rel="noopener">Navigation Menu
+              using CSS Flex</a>
+          </p>
+        </div>
+      </li>
+      <li>The navigation must employ a <strong>hover</strong> affect. See the <strong>CodePen</strong>
+        above for an example.
+        <details>
+          <summary>Check Your Understanding</summary>
+          Consider using the <code>hover</code> pseudo-class to change the design for the menu item that has the focus.
+          <pre><code class="css hljs language-css"><span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> { ... }</code></pre>
+        </details>
+      </li>
+
+      <li>The <code>main</code> element has a limited width and is centered on the screen
+        horizontally.
+        <details>
+          <summary>Check Your Understanding</summary>
+          Consider using the <code>max-width</code> property to limit the width and <code>margin</code> property to
+          center the main element on the screen.
+          <pre><code class="css hljs language-css"><span class="hljs-comment">/* This is only an example to consider */</span>
+<span class="hljs-selector-tag">main</span> { 
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">800px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+}</code></pre>
+        </details>
+      </li>
+      <li>Layout the main column <code>figure</code> elements using <strong>CSS Grid</strong>. In
+        the mobile view, there should only be one (1) column.
+        <div class="callout info">
+          <p>
+            The application of CSS Grid to support a responsive view is up to you.</p>
+          <br>Some of the options could be:
+          <ul>
+            <li>use <code>grid-template-column</code> specific <code>fr</code> changes in the media
+              query</li>
+            <li>use <code>grid-template-column</code> property with a <code>repeat</code> function and
+              <code>auto-fit</code> and <code>minmax</code> function.
+              <div class="callout reference">
+                <p>
+                  CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/raBqbbq" target="_blank" rel="noopener">Grid
+                    Column Layouts and Image Effects</a><br>Look at the CSS for the .container class.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+    <h4 class="step">JavaScript</h4>
+    <div class="callout warning">
+      <p>To improve organization and maintainability, it is required to place all JavaScript code in external files.</p>
+    </div>
+    <ol>
+      <li>Support the <code>footer</code> copyright year and date last modified output through a valid JavaScript
+        reference. You already have one or could use the <strong>temples.js</strong> file.
+      </li>
+
+      <li>Apply a responsive hamburger effect to your existing navigation menu using JavaScript.
+        <ul class="check">
+          <li>The hamburger button should only show in the mobile view.</li>
+          <li>Clicking the hamburger button toggles the navigation menu items from viewable to not viewable.</li>
+          <li>Use a symbol, such as an 'X' to close the hamburger menu.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h4 class="step">Testing</h4>
+
+    <ol>
+      <li>Continuously check your work by rendering the page locally using Live/Five Server in VS Code.</li>
+      <li>
+        <figure class="floatright">
+          <img src="./WDD 131 _ Week 02 _ Assignment_files/console-error-icon.png" alt="Screenshot of console error icon in DevTools" loading="lazy" width="250">
+        </figure>Use the browser's DevTools to check for JavaScript runtime errors in the console or
+        click the red, error icon in the upper right corner of DevTools.
+
+      </li>
+
+      <li>Use DevTools <strong><a href="https://developer.chrome.com/docs/devtools/css-overview/" target="_blank" rel="noopener">CSS Overview</a></strong> to check your color contrast.</li>
+      <li>Generate the DevTools <strong>Lighthouse</strong> report and run diagnostics for
+        <strong>Accessibility</strong>, <strong>Best Practices</strong>, and <strong>SEO</strong> in <strong>both the
+          mobile and desktop</strong> views.
+        <div class="callout warning">
+          <p>It is best to test your page in a <strong>Private</strong> or <strong>Incognito</strong> browser window.
+          </p>
+        </div>
+      </li>
+      <li>Hard reload the page using <strong>Empty Cache and Hard Reload</strong> in <strong>DevTools</strong> with the
+        <strong>Network</strong> tab open to view the total transferred bytes at the bottom of the tab. Check that the
+        page is 500 kB or less.
+        <ul>
+          <li>Make sure that all images are optimized.</li>
+          <li>Do not use third party libraries that bloat your page's size with unused features and code.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>Audit and Submission</h3>
+    <ol>
+      <li>Commit your local repository and push or upload your work to your GitHub Pages enabled <code>wdd131</code>
+        repository on GitHub.</li>
+      <li>Use this ✔ <a href="https://byui-cse.github.io/wdd-audits/wdd131-w02-picture-album.html">Page Audit Tool</a> to check basic HTML and CSS
+        standards and requirements.</li>
+      <li><strong>Share</strong> your work by posting your URL in the course's Microsoft Teams <strong>Week 02 Forum</strong> and comment on your peers' work by providing constructive feedback.</li>
+      <li>Return to Canvas and submit the correct GitHub Pages enabled URL.
+        <pre><code class="hljs language-bash">https://your-github-username.github.io/wdd131/temples.html</code></pre>
+      </li>
+    </ol>
+
+    <hr>
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week02/index.html">Week 02 Home</a></span>
+    </nav>
+
+  </main>
+
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+
+  <script src="./WDD 131 _ Week 02 _ Assignment_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+
+
+</body></html>

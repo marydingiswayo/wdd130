@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://byui-cse.github.io/cse111-ww-course/week01/prepare-2.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 111 | Learning Activities</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program-pt/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./CSE 111 _ Learning Activities 2_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./CSE 111 _ Learning Activities 2_files/course.css">
+  <link rel="stylesheet" href="./CSE 111 _ Learning Activities 2_files/math.css">
+  <link rel="stylesheet" href="./CSE 111 _ Learning Activities 2_files/vs2015.min.css">
+  <script type="text/javascript" src="./CSE 111 _ Learning Activities 2_files/620f7e0f8d21af1a_complete.js.download" crossorigin="anonymous"></script>
+<style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 111<span id="coursetitle">: Programming with Functions</span></h1>
+      <img src="./CSE 111 _ Learning Activities 2_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav id="autogen-top-nav">
+      <!-- This nav is auto-generated -->
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/index.html">Home</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/cse111-ww-course/week01/index.html">W1</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week02/index.html">W2</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week03/index.html">W3</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week04/index.html">W4</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week05/index.html">W5</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week06/index.html">W6</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week07/index.html">W7</a></span>
+      <!-- end auto-generated -->
+    </nav>
+    <h2>W01 Prepare 2: Calling Functions</h2>
+    <p>Because most useful computer programs are very large, programmers
+      divide their programs into parts. Dividing a program into parts
+      makes it easier to write, debug, and understand. A programmer can
+      divide a Python program into modules, classes, and functions. In
+      this lesson, you will learn how to call existing functions, and in
+      the next lesson, you will learn how to write your own functions.</p>
+    <h3 id="concepts">Concepts</h3>
+    <p>Here are the Python programming concepts and topics that you
+      should learn during this lesson.</p>
+    <h4 id="func_def">What Is a Function?</h4>
+    <p>A <dfn>function</dfn> is a group of statements (computer
+      commands) that together perform one task. Broadly speaking, there
+      are four types of functions in Python which are:</p>
+    <ol>
+      <li>
+        <div>Built-in functions</div>
+      </li>
+      <li>
+        <div>Standard library functions</div>
+      </li>
+      <li>
+        <div>Third-party functions</div>
+      </li>
+      <li>
+        <div>User-defined functions</div>
+      </li>
+    </ol>
+    <p>A programmer (you) can save lots of time by using existing
+      functions. In this lesson, you will learn how to use (call) the
+      first two types of functions. In
+      <a href="https://byui-cse.github.io/cse111-ww-course/week03/prepare-1.html">week 3</a>, you will learn
+      how to install third-party modules and call third-party functions.
+      In the <a href="https://byui-cse.github.io/cse111-ww-course/week02/prepare-1.html">next lesson</a>, you will
+      learn how to write and call user-defined functions.
+    </p>
+    <h4 id="built_in_funcs">Built-in Functions</h4>
+    <p>Python includes many <dfn>built-in functions</dfn> such as:
+      <code>input</code>, <code>int</code>, <code>float</code>,
+      <code>str</code>, <code>len</code>, <code>range</code>,
+      <code>abs</code>, <code>round</code>, <code>list</code>,
+      <code>dict</code>, <code>open</code>, and <code>print</code>. These
+      are called built-in functions because you don’t have to import any
+      module to use them. They are simply a built-in part of the Python
+      language. You can read about the built-in functions in the
+      <a href="https://docs.python.org/3/library/functions.html">Built-in
+        Functions</a> section of the official Python online
+      reference.
+    </p>
+    <h4 id="call_func">How to Call a Function</h4>
+    <p>A programmer uses a function by calling it (also known as
+      invoking it). To <dfn>call</dfn> (or <dfn>invoke</dfn>) a function
+      means to write code that causes the computer to execute the code
+      that is inside that function. Regardless of the type of function
+      (built-in, standard, third-party, or user-defined), a function is
+      called by writing its name followed by a set of parentheses
+      (&nbsp;). During CSE&nbsp;110 and&nbsp;111, you often wrote code
+      that called the built-in <code>input</code> and <code>print</code>
+      functions like this:</p>
+    <div id="ex1">
+      <pre><code class="language-python nohljsln hljs" data-highlighted="yes">name = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Please enter your name: "</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Hello <span class="hljs-subst">{name}</span>"</span>)</code></pre>
+      <pre class="console">&gt; python example_1.py
+Please enter your name: <span class="input">Miyuki</span>
+Hello Miyuki</pre>
+    </div>
+    <p>Notice in the previous code example that to call the
+      <code>input</code> function, the programmer wrote the name of the
+      function, <code>input</code>, followed by parentheses. The
+      programmer did the same to call the <code>print</code> function.
+    </p>
+    <p>To call a function you must know the following three things:</p>
+    <ol>
+      <li>
+        <div>The name of the function</div>
+      </li>
+      <li>
+        <div>The parameters that the function accepts</div>
+      </li>
+      <li>
+        <div>What the function does</div>
+      </li>
+    </ol>
+    <p>These three pieces of information are normally available in
+      online documentation. For example, from the online Python
+      reference for the
+      <code>input</code>
+      function, we read this:
+    </p>
+    <dl class="function">
+      <dt>
+        <pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-built_in">input</span>(prompt)</code></pre>
+      </dt>
+      <dd>Write the <var>prompt</var> parameter to the terminal
+        window, then read a line of user input from the terminal
+        window, convert the input to a string, and return the input
+        as a string.</dd>
+    </dl>
+    <p>From this short description, we know the following:</p>
+    <ol>
+      <li>
+        <div>The name of the function is
+          <code>input</code>.
+        </div>
+      </li>
+      <li>
+        <div>The function accepts one parameter named
+          <var>prompt</var>.
+        </div>
+      </li>
+      <li>
+        <div>The function writes the prompt to a terminal window and
+          then reads user input from the terminal and returns that input
+          to the calling function.</div>
+      </li>
+    </ol>
+    <p>A <dfn>parameter</dfn> is a piece of data that a function needs
+      in order to complete its task. In the online reference for the
+      <code>input</code> function, we see that the <code>input</code>
+      function has one parameter named <var>prompt</var>.
+    </p>
+    <p>An <dfn id="arg">argument</dfn> is the value that is passed
+      through a parameter into a function. In other words, parameters are
+      listed in a function’s documentation, and arguments are listed in a
+      call to a function.</p>
+    <p>To write code that calls a function, we normally do the
+      following:</p>
+    <ol>
+      <li>
+        <div>Type a new variable name and use the assignment
+          operator (=) to assign a value to the variable.</div>
+      </li>
+      <li>
+        <div>Type the name of the function followed by a set of
+          parentheses.</div>
+      </li>
+      <li>
+        <div>Between the parentheses, type arguments that the
+          computer will pass into the function through its
+          parameters.</div>
+      </li>
+    </ol>
+    <p>For example, the following code calls the built-in
+      <code>input</code> function and passes the string <code>"Please
+    enter your name: "</code> as the argument for the <var>prompt</var>
+      parameter.
+    </p>
+    <div>
+      <pre><code class="language-python hljs" data-highlighted="yes">name = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Please enter your name: "</span>)</code></pre>
+    </div>
+    <p>When a function has more than one parameter and a programmer
+      writes code to call that function, the programmer nearly always
+      writes the arguments in the same order as the parameters. Consider
+      the description of the built-in
+      <code>round</code>
+      function:
+    </p>
+    <!-- At this point in their computer programming education,
+    most students are familiar with only a few functions. In addition,
+    many of the students do not know enough math to successfully pass
+    college algebra. It was difficult to choose a Python function with
+    multiple parameters and a purpose that most students would
+    understand. I settled on the round function even though its second
+    parameter is optional. Here are some other functions that I
+    considered writing about in this list item: divmod, pow, range,
+    open, math.comb, math.perm, math.dist, math.remainder -->
+    <dl class="function">
+      <dt>
+        <pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-built_in">round</span>(number, ndigits)</code></pre>
+      </dt>
+      <dd>Return <var>number</var> rounded to
+        <var>ndigits</var> precision after the decimal point. If
+        <var>ndigits</var> is omitted or is <code>None</code>,
+        <code>round</code> returns the nearest integer to
+        <var>number</var>.
+      </dd>
+    </dl>
+    <p>Now consider this Python code that gets a number from a user,
+      rounds that number to two digits after the decimal, and then prints
+      the rounded number.</p>
+    <div id="ex2">
+
+      <pre><code class="language-python nohljsln hljs" data-highlighted="yes">n = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">"Please enter a number: "</span>))
+r = <span class="hljs-built_in">round</span>(n, <span class="hljs-number">2</span>)
+<span class="hljs-built_in">print</span>(r)</code></pre>
+      <pre class="console">&gt; python example_2.py
+Please enter a number: <span class="input">95.716</span>
+95.72</pre>
+    </div>
+    <p>In the previous example,</p>
+    <ul>
+      <li>
+        <div>The code on
+          line&nbsp;1 causes
+          the computer to call the built-in <code>input</code>
+          function and then call the built-in <code>float</code>
+          function.
+        </div>
+      </li>
+      <li>
+        <div>Line&nbsp;2
+          causes the computer to call the built-in <code>round</code>
+          function and pass two arguments. Notice that the order of
+          the arguments matches the order of the parameters.
+          Specifically, the number to be rounded (<var>n</var>) is the
+          first argument, and the number of digits after the decimal
+          point (2) is the second argument.</div>
+      </li>
+      <li>
+        <div>Line&nbsp;3
+          causes the computer to call the built-in <code>print</code>
+          function to print the rounded number.</div>
+      </li>
+    </ul>
+    <h4 id="opt_args">Optional Arguments</h4>
+    <p>When calling a function or method, some arguments are
+      <dfn>optional</dfn>. Again consider the description of the built-in
+      <code>round</code> function:
+    </p>
+    <dl class="function">
+      <dt>
+        <pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-built_in">round</span>(number, ndigits)</code></pre>
+      </dt>
+      <dd>Return <var>number</var> rounded to
+        <var>ndigits</var> precision after the decimal point. If
+        <var>ndigits</var> is omitted or is <code>None</code>,
+        <code>round</code> returns the nearest integer to
+        <var>number</var>.
+      </dd>
+    </dl>
+    <p>From the description, we read that the second argument is
+      optional. If the programmer doesn’t type a second argument, the
+      value in the <var>number</var> parameter will be rounded to an
+      integer. The next code example is similar to the previous example.
+      The only difference is that at
+      line&nbsp;2 of the next
+      example the programmer typed only one argument to the
+      <code>round</code> function. Because the programmer omitted the
+      second argument, the <code>round</code> function will round the
+      number in its first parameter to an integer, which is shown in the
+      output below.
+    </p>
+    <div id="ex3">
+
+      <pre><code class="language-python nohljsln hljs" data-highlighted="yes">n = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">"Please enter a number: "</span>))
+r = <span class="hljs-built_in">round</span>(n)
+<span class="hljs-built_in">print</span>(r)</code></pre>
+      <pre class="console">&gt; python example_3.py
+Please enter a number: <span class="input">95.716</span>
+96</pre>
+    </div>
+    <h4 id="named_args">Named Arguments</h4>
+    <p>For some optional arguments, we must pass a <dfn>named
+        argument</dfn>, which is an argument that is preceded by the name of
+      its matching parameter. For example, here is an excerpt from the
+      documentation for the <code>print</code> function:</p>
+    <dl class="function">
+      <dt>
+        <pre><code class="language-python hljs" data-highlighted="yes"><span class="hljs-built_in">print</span>(*objects, sep=<span class="hljs-string">" "</span>, end=<span class="hljs-string">"\n"</span>, file=sys.stdout, flush=<span class="hljs-literal">False</span>)</code></pre>
+      </dt>
+      <dd>Print objects to the text stream <var>file</var>,
+        separated by <var>sep</var> and followed by <var>end</var>.
+        <var>sep</var>, <var>end</var>, <var>file</var> and
+        <var>flush</var>, if present, must be given as named
+        arguments.
+      </dd>
+    </dl>
+    <p>Notice from the excerpt that the <code>print</code> function can
+      take many objects that will be printed. Optionally, it can take
+      parameters named <var>sep</var>, <var>end</var>, <var>file</var>,
+      and <var>flush</var> that must be named when they are used. For
+      example, this code calls the <code>print</code> function to print
+      three words all separated by a vertical bar (|). Notice the named
+      arguments <var>sep</var> and <var>flush</var>.</p>
+    <div id="ex4">
+      <pre><code class="language-python nohljsln hljs" data-highlighted="yes">x = <span class="hljs-string">"sun"</span>
+y = <span class="hljs-string">"moon"</span>
+z = <span class="hljs-string">"stars"</span>
+<span class="hljs-built_in">print</span>(x, y, z, sep=<span class="hljs-string">"|"</span>, flush=<span class="hljs-literal">True</span>)</code></pre>
+      <pre class="console">&gt; python example_4.py
+sun|moon|stars</pre>
+    </div>
+    <h4 id="call_module_func">How to Call a Function that Is inside a Module</h4>
+    <p>A Python <dfn>module</dfn> is a collection of related functions.
+      The Python <dfn>standard library</dfn> includes many modules which
+      have more functions, such as the <code>math</code>
+      module—which includes the <code>floor</code>,
+      <code>ceil</code>, and <code>sqrt</code> functions and the
+      <code>random</code> module—which includes the
+      <code>randint</code>, <code>choice</code>, and <code>shuffle</code>
+      functions. Consider the description of the
+      <code>sqrt</code>
+      function that is in the standard <code>math</code> module:
+    </p>
+    <dl class="function">
+      <dt>
+        <pre><code class="language-python hljs" data-highlighted="yes">math.sqrt(x)</code></pre>
+      </dt>
+      <dd>Return the square root of <var>x</var>.</dd>
+    </dl>
+    <p>From this short description, we know the following:</p>
+    <ol>
+      <li>
+        <div>The name of the containing module is
+          <code>math</code>.
+        </div>
+      </li>
+      <li>
+        <div>The name of the function is
+          <code>sqrt</code>.
+        </div>
+      </li>
+      <li>
+        <div>The function accepts one parameter named
+          <var>x</var>.
+        </div>
+      </li>
+      <li>
+        <div>The function computes and returns the square root
+          of the number that is in <var>x</var>.</div>
+      </li>
+    </ol>
+    <p>To use any code that is in a module, you must import the module
+      into your program and precede the function name with the module
+      name. For example, if you wish to call the <code>math.sqrt</code>
+      function, you must first import the <code>math</code> module and
+      then type <code>math.</code> in front of <code>sqrt</code> like
+      this:</p>
+    <div id="ex5">
+      <pre><code class="language-python nohljsln hljs" data-highlighted="yes"><span class="hljs-keyword">import</span> math
+r = math.sqrt(<span class="hljs-number">71</span>)
+<span class="hljs-built_in">print</span>(r)</code></pre>
+      <pre class="console">&gt; python example_5.py
+8.426149773176359</pre>
+    </div>
+    <p>In the above example, 71 is the argument that will be passed
+      through the parameter <var>x</var> into the <code>math.sqrt</code>
+      function. The <code>math.sqrt</code> function will compute the
+      square root of 71 and return the computed value that will then be
+      stored in the variable <var>r</var>. You can read more about the
+      standard modules in the official documentation for the
+      <a href="https://docs.python.org/3/library/">Python Standard
+        Library</a>.
+    </p>
+    <h4 id="call_method">How to Call a Method</h4>
+    <p>Python is an object-oriented language and includes many classes
+      and objects. A <dfn>method</dfn> is a function that belongs to a
+      class or object. Even though classes and objects are not part of
+      this course (CSE&nbsp;111), calling a method in Python is so common
+      and so easy that you should know how to do it. A method is a kind of
+      function, so calling a method is similar to calling a function. The
+      difference is that to call a method we must type the name of the
+      object and a period (.) in front of the method name.</p>
+    <p>Consider the program in example&nbsp;6 that gets a string of text
+      from a user and prints the number of characters in the string and
+      prints the string in all upper case characters.</p>
+    <div id="ex6">
+
+      <pre><code class="language-python hljs" data-highlighted="yes"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1"><span class="hljs-comment"># Example 6</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2"><span class="hljs-comment"># Get a string of text from the user.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">text1 = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Enter a motivational quote: "</span>)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4"><span class="hljs-comment"># Call the built-in len function to get</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5"><span class="hljs-comment"># the number of characters in the text.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="6"><div class="hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="6">length = <span class="hljs-built_in">len</span>(text1)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="7"><div class="hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="7"><span class="hljs-comment"># Call the string upper method to convert</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="8"><div class="hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="8"><span class="hljs-comment"># the quote to upper case characters.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="9"><div class="hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="9">text2 = text1.upper()</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="10"><div class="hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="10"><span class="hljs-comment"># Call the built-in print function to print</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="11"><div class="hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="11"><span class="hljs-comment"># the length of the text and the text in all</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="12"><div class="hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="12"><span class="hljs-comment"># upper case for the user to see.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="13"><div class="hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="13"><span class="hljs-built_in">print</span>(length, text2)</td></tr></tbody></table></code></pre>
+      <pre class="console">&gt; python example_6.py
+Enter a motivational quote: <span class="input">Rise, take up thy bed, and walk.</span>
+32 RISE, TAKE UP THY BED, AND WALK.</pre>
+    </div>
+    <p>Notice the code on
+      line&nbsp;6
+      calls the built-in <code>len</code> function and the code on
+      line&nbsp;9
+      calls the string <code>upper</code> method. Compare the function
+      call in line&nbsp;6 to the
+      method call in line&nbsp;9.
+      To call the <code>len</code> function, we type the name of the
+      function followed by a list of arguments inside parentheses. To call
+      the <code>upper</code> method, we type the name of the object
+      (<code>text1</code>) and a period, then the method name
+      (<code>upper</code>), and then a list of arguments inside
+      parentheses.
+    </p>
+    <p>A method can receive arguments just like a function can. However,
+      in example&nbsp;6 at
+      line&nbsp;9, there are no
+      arguments passed to the <code>upper</code> method, so the
+      parentheses are empty. In order for the computer to call the
+      <code>upper</code> method, a programmer must type the empty
+      parentheses. In other words, if you write a line of code to call the
+      <code>upper</code> method but don’t type the empty parentheses, like
+      this:
+    </p>
+    <div>
+      <pre><code class="language-python hljs" data-highlighted="yes">text2 = text1.upper  <span class="hljs-comment"># Does NOT call the upper method</span>
+</code></pre>
+    </div>
+    <p>the computer will not call the <code>upper</code> method. Instead
+      the computer will assign a reference to the <code>upper</code>
+      method to the <var>text2</var> variable. You don’t want the computer
+      to do this because assigning a function reference won’t make sense
+      to you until you study functional programming.</p>
+    <h4 id="store_returned_val">How to Store a Returned Value</h4>
+    <p>All the previous examples in this preparation content use the
+      assignment operator (=) to store the value returned from a function
+      in a variable. For example:</p>
+    <div>
+      <pre><code class="language-python hljs" data-highlighted="yes">text = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Enter a motivational quote: "</span>)</code></pre>
+    </div>
+    <p>While it’s usually a good practice, you don’t <em>have</em> to
+      store the value that is returned from a function in a variable.
+      Sometimes you will see it used directly as shown in example&nbsp;7 at
+      lines 7,&nbsp;10, and&nbsp;12.
+    </p><div id="ex7">
+
+      <pre><code class="language-python hljs" data-highlighted="yes"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1"><span class="hljs-comment"># Example 7</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2"><span class="hljs-keyword">import</span> math</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3"><span class="hljs-comment"># Get a number from the user.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4">number = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">"Enter a number: "</span>))</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5"><span class="hljs-comment"># Call the math.sqrt function and</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="6"><div class="hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="6"><span class="hljs-comment"># immediately print its return value.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="7"><div class="hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="7"><span class="hljs-built_in">print</span>( math.sqrt(number) )</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="8"><div class="hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="8"><span class="hljs-comment"># Call the math.sqrt function again and</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="9"><div class="hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="9"><span class="hljs-comment"># use its return value in an if statement.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="10"><div class="hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="10"><span class="hljs-keyword">if</span> math.sqrt(number) &lt; <span class="hljs-number">100</span>:</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="11"><div class="hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="11">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"The square root is less than 100."</span>)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="12"><div class="hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="12"><span class="hljs-keyword">elif</span> math.sqrt(number) &gt; <span class="hljs-number">100</span>:</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="13"><div class="hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="13">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"The square root is more than 100."</span>)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="14"><div class="hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="14"><span class="hljs-keyword">else</span>:</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="15"><div class="hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="15">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"The square root is exactly 100."</span>)</td></tr></tbody></table></code></pre>
+      <pre class="console">&gt; python example_7.py
+Enter a number: <span class="input">675</span>
+25.98076211353316
+The square root is less than 100.</pre>
+    </div>
+    <p>Notice in example&nbsp;7, there are three statements that call
+      the <code>math.sqrt</code> function. Every time the
+      computer calls a function, the computer will execute the code that
+      is inside that function. In example&nbsp;7, because the argument
+      is the same all three times the function is called the returned result will be the same in all three cases. So it
+      would
+      be faster to save the result in a variable and reuse the variable
+      instead, as shown in example&nbsp;8.
+    </p>
+    <div id="ex8">
+
+      <pre><code class="language-python hljs" data-highlighted="yes"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1"><span class="hljs-comment"># Example 8</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2"><span class="hljs-keyword">import</span> math</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3"><span class="hljs-comment"># Get a number from the user.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4">number = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">"Enter a number: "</span>))</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5"><span class="hljs-comment"># Call the math.sqrt function and store its</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="6"><div class="hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="6"><span class="hljs-comment"># return value in a variable to use later.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="7"><div class="hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="7">root = math.sqrt(number)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="8"><div class="hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="8"><span class="hljs-built_in">print</span>(<span class="hljs-string">f"The square root is <span class="hljs-subst">{root:<span class="hljs-number">.2</span>f}</span>"</span>)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="9"><div class="hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="9"><span class="hljs-keyword">if</span> root &lt; <span class="hljs-number">100</span>:</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="10"><div class="hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="10">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"The square root is less than 100."</span>)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="11"><div class="hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="11"><span class="hljs-keyword">elif</span> root &gt; <span class="hljs-number">100</span>:</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="12"><div class="hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="12">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"The square root is more than 100."</span>)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="13"><div class="hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="13"><span class="hljs-keyword">else</span>:</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="14"><div class="hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="14">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"The square root is exactly 100."</span>)</td></tr></tbody></table></code></pre>
+      <pre class="console">&gt; python example_8.py
+Enter a number: <span class="input">675</span>
+The square root is 25.98
+The square root is less than 100.</pre>
+    </div>
+    <h3 id="video">Video</h3>
+    <p>The following video shows a BYU-Idaho student writing Python code
+      that calls built-in functions.</p>
+    <ul class="videos">
+      <li>
+        <div>
+          <a href="https://video.byui.edu/media/t/1_a0n2g19s">Calling
+            Built-in Functions</a> <span class="duration">(11 minutes)</span>
+          <figure class="video-container"><iframe loading="lazy" allowfullscreen="" title="Calling Built-in Functions" src="./CSE 111 _ Learning Activities 2_files/1157612.html"></iframe>
+          </figure>
+        </div>
+      </li>
+    </ul>
+    <h3 id="summary">Summary</h3>
+    <p>A function is a group of statements that together perform one
+      task. The computer will not execute the code in a function unless
+      you write code that calls the function. In this lesson, you learned
+      how to call built-in functions, functions that are in a module, and
+      functions (methods) that belong to an object.</p>
+    <ol>
+      <li>
+        <div>To call a built-in function, write code that
+          follows this template:
+          <div>
+            <pre><code class="language-python hljs" data-highlighted="yes">variable_name = function_name(arg1, arg2, … argN)
+</code></pre>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>To call a function from a module, import the module
+          and write code that follows this template:
+          <div>
+            <pre><code class="language-python nohljsln hljs" data-highlighted="yes"><span class="hljs-keyword">import</span> module_name
+variable_name = module_name.function_name(arg1, arg2, … argN)
+</code></pre>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>To call a method, write code that follows this template:
+          <div>
+            <pre><code class="language-python hljs" data-highlighted="yes">variable_name = object_name.method_name(arg1, arg2, … argN)
+</code></pre>
+          </div>
+        </div>
+      </li>
+    </ol>
+    <h2>Activity: Calling Functions</h2>
+    <h3 id="purpose">Purpose</h3>
+    <p>Check your understanding of calling built-in Python functions and
+      functions that are in a standard Python module.</p>
+    <h3 id="problem">Problem Statement</h3>
+    <p>In our modern world economy, many items are manufactured in large
+      factories, then packed in boxes and shipped to distribution centers
+      and retail stores. A common question for employees who pack items is
+      “How many boxes do we need?”</p>
+    <h3 id="assign">Assignment</h3>
+    <p>A manufacturing company needs a program that will help its
+      employees pack manufactured items into boxes for shipping. Write a
+      Python program named <code>boxes.py</code> that asks the user for
+      two integers:</p>
+    <ol>
+      <li>
+        <div>the number of manufactured items</div>
+      </li>
+      <li>
+        <div>the number of items that the user will pack per box</div>
+      </li>
+    </ol>
+    <p>Your program must compute and print the number of boxes necessary
+      to hold the items. This must be a whole number. Note that the last
+      box may be packed with fewer items than the other boxes.</p>
+    <h3 id="helpful_docs">Helpful Documentation</h3>
+    <ul>
+      <li>
+        <div>The math.ceil() function
+          rounds a number up to the nearest integer that is greater than
+          or equal to a number.</div>
+      </li>
+    </ul>
+    <h3 id="testing">Testing Procedure</h3>
+    <p>Verify that your program works correctly by following each step
+      in this testing procedure:</p>
+    <ol class="test">
+      <li>
+        <div>Run your program and enter the inputs shown below.
+          Ensure that your program’s output matches the output below.
+          <pre class="console">&gt; python boxes.py
+Enter the number of items: <span class="input">8</span>
+Enter the number of items per box: <span class="input">5</span>
+For 8 items, packing 5 items in each box, you will need 2 boxes.
+&gt; python boxes.py
+Enter the number of items: <span class="input">25</span>
+Enter the number of items per box: <span class="input">4</span>
+For 25 items, packing 4 items in each box, you will need 7 boxes.</pre>
+        </div>
+      </li>
+    </ol>
+    <h3 id="solution">Sample Solution</h3>
+    <p>When your program is finished, view the <a class="solution" href="https://byui-cse.github.io/cse111-ww-course/week01/samples/check-2_solution.html">sample
+        solution</a> for this assignment to
+      compare your solution to that one. Before looking at the sample
+      solution, you should work to complete this checkpoint program.
+      However, if you have worked on it for at least an hour and are still
+      having problems, feel free to use the sample solution to help you
+      finish your program.</p>
+    <h3 id="ponder">Ponder</h3>
+    <p>During this assignment, you wrote code that calls the
+      <code>math.ceil()</code> function. What did the
+      <code>math.ceil()</code> function do in your program? If the
+      <code>math.ceil()</code> function didn’t exist, would this
+      assignment have been more difficult to complete?
+    </p>
+    <h3 id="submit">Submission</h3>
+    <p>When complete, report your progress in the associated Canvas
+      quiz.</p>
+    <h4>Submission</h4>
+    <p></p>
+    <h3>Useful Links:</h3>
+    <ul>
+      <li>Return to: <a href="https://byui-cse.github.io/cse111-ww-course/week01/index.html">Week Overview</a> | <a href="https://byui-cse.github.io/cse111-ww-course/index.html">Course Home</a></li>
+    </ul>
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+
+  <script src="./CSE 111 _ Learning Activities 2_files/highlight.min.js.download"></script>
+  <script src="./CSE 111 _ Learning Activities 2_files/highlightjs-line-numbers.min.js.download"></script>
+  <script>
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+  </script>
+
+
+</body></html>

@@ -157,7 +157,7 @@ socialmedia a {
 }
 
 .hero img {
-    display: block;
+    display: flexbox;
     width: 100%;
     height: auto;
     float: right;

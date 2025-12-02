@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://byui-cse.github.io/wdd131-ww-course/week01/prepare-variables.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | Variables</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 131 _ Variables_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 131 _ Variables_files/course.css">
+  <link rel="stylesheet" href="./WDD 131 _ Variables_files/vs2015.min.css">
+
+  <script src="./WDD 131 _ Variables_files/ca896ddec2fd3e19_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="./WDD 131 _ Variables_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/">Home</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week02/">W2</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W01 Learning Activity: JavaScript Variables</h2>
+    <h3>Overview</h3>
+    <p>Variables are used to <strong>store</strong> values. These values can be <strong>primitive</strong> like a
+      number, string, Boolean, or null or they can be <strong>objects</strong> like a function, class, or literal
+      object. The values can be used as input to expressions, be used in processing, or be used in output to display
+      information.
+    </p>
+
+    <div class="callout info">
+      <p>To give you a better understanding of how JavaScript works, this course covers core features and control
+        structures of the
+        language, including variables. These programming structures and concepts are common to <strong>all</strong>
+        programming languages. The use cases presented here are a review of what you have already learned in the
+        pre-requisite courses.</p>
+    </div>
+
+    <h3>Prepare</h3>
+    <p>Answer the following questions using these resources or through your own research:</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables" target="_blank" rel="noopener">Storing the information you need — Variables</a> – MDN</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" target="_blank">JavaScript
+          data types and data structures</a> – MDN</li>
+    </ul>
+
+    <ol>
+      <li>What is the difference between <code>const</code> and <code>let</code>?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <ul>
+            <li><code>const</code>: Declares a variable with a constant value. This means that once you assign a value
+              to a <code>const</code> variable, you cannot reassign it later in your code.
+              <pre><code class="javascript hljs language-javascript"><span class="hljs-keyword">const</span> currentYear = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>().<span class="hljs-title function_">getFullYear</span>();</code></pre>
+              The <code>currentYear</code> variable is assigned the computer's current year and cannot be reassigned
+              later.
+              <div class="callout ai">
+                <p>You can enter lines of code into most AI systems, and they will provide a breakdown explaining the
+                  purpose and function of each
+                  part of the code.</p>
+              </div>
+            </li>
+            <li><code>let</code>: Declares a variable that can be reassigned later in your code.
+              <pre><code class="javascript hljs language-javascript"><span class="hljs-keyword">let</span> isLoggedIn = <span class="hljs-literal">false</span>;</code></pre>
+            </li>
+          </ul>
+
+        </details>
+      </li>
+
+      <li>Define the string data type.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>A string data type is a collection or sequence of characters treated as a single unit. Strings can
+            include letters, numbers, symbols, and even spaces.</p>
+        </details>
+      </li>
+
+      <li>What is the data type of each of the following?
+        <div class="callout info">
+          <p>Let your mouse rest on each of the bulleted values to reveal the answer.</p>
+        </div>
+        <ul>
+          <li><span title="string">"101"</span></li>
+          <li><span title="number">101</span></li>
+          <li><span title="boolean">true</span></li>
+          <li><span title="null">null</span></li>
+          <li><span title="undefined">undefined</span></li>
+        </ul>
+        <div class="callout ai">
+          <p>Want to know more about any of these examples?<br> Enter the following prompt into an AI system: "In JS,
+            what is the null data type"</p>
+        </div>
+      </li>
+
+      <li>Which should you use to wrap strings, single quotes('), double quotes("), or backticks(`)?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>In JavaScript you can use single quotes ('), double quotes ("), or backticks (`) to define string literals.
+          </p>
+          <p>The most traditional way is to use single quotes.</p>
+          <pre><code class="javascript hljs language-javascript"><span class="hljs-string">'This a string.'</span></code></pre>
+          <p>Double quotes are also commonly used. They can help you avoid escaping single quotes.</p>
+          <pre><code class="javascript hljs language-javascript"><span class="hljs-string">"It's a beautiful day!"</span></code></pre>
+          <p>Since HTML attributes are often enclosed in double quotes, some developers prefer to use single quotes for
+            JavaScript strings to visually distinguish them.</p>
+          <p>Template literals use backticks and support multi-line strings naturally. They also allow embedding
+            variables and JS expressions directly.</p>
+        </details>
+      </li>
+
+      <li>What is a <a href="https://byui-cse.github.io/wdd131-ww-course/resources/javascript-template-literals.html">template literal</a> and why is it used
+        to build strings?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>Template literals are string literals that allow for embedded expressions. They are enclosed by the
+            backtick
+            (`) character instead of single or double quotes. Template literals can contain placeholders, which are
+            indicated by the dollar sign and curly braces (${expression}).
+          </p><pre><code class="javascript hljs language-javascript"><span class="hljs-keyword">let</span> name = <span class="hljs-string">'Alicia'</span>;
+<span class="hljs-keyword">let</span> age = <span class="hljs-number">25</span>;
+<span class="hljs-keyword">let</span> message2 = <span class="hljs-string">`My name is <span class="hljs-subst">${name}</span> and I am <span class="hljs-subst">${age}</span> years old.`</span>;</code></pre>
+          <p></p>
+        </details>
+      </li>
+      <li>What are <strong>code comments</strong> and how are they written in JavaScript?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>
+          </p><ul>
+            <li>Code commenting is a way to annotate your code for yourself and others who may read your code.</li>
+            <li>Code comments example CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/zYgVXXa" target="_blank" rel="noopener">JavaScript Code Comments</a></li>
+          </ul>
+          <p></p>
+        </details>
+
+
+
+      </li>
+    </ol>
+
+    <h3>Activity Instructions</h3>
+    <ol>
+      <li>Open up this CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/NWQmxwa" target="_blank" rel="noopener">JavaScript Variables</a>.
+
+        <div class="callout info">
+          <p>
+            You might consider creating your own free <a href="https://codepen.io/">CodePen</a> account to use to store
+            snippets of code if you have not done so already. CodePen provides a web-based code editor where you can
+            write HTML, CSS, and JavaScript code and see the results in real-time.
+          </p>
+        </div>
+      </li>
+      <li>Read the instructions in the JavaScript panel in the CodePen window.</li>
+      <li>Ponder the given questions as you work through the code examples and review the output.
+        <div class="callout info">
+          <p>Demonstration Video: ▶️ <a href="https://www.loom.com/share/91a41ac62cdf4369a8a51aac32bbbde4" target="_blank" rel="noopener">JavaScript Variables Activity</a> – <span class="smaller">[ 5:50
+              minutes ]</span></p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="callout reference">
+      <h4>Optional Resources</h4>
+      <ol>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics#Variables" target="_blank" rel="noopener">JavaScript Basics – Variables</a> – MDN.</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables">Test
+            your skills: variables</a> – MDN</li>
+      </ol>
+    </div>
+
+    <hr>
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01/index.html">Week 01 Home</a></span>
+    </nav>
+
+  </main>
+
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 131 _ Variables_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+
+
+
+</body></html>
