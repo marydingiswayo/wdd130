@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://byui-cse.github.io/wdd131-ww-course/week03/assignment-03.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | Week 03 | Assignment</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 131 _ Week 03 _ Assignment_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 131 _ Week 03 _ Assignment_files/course.css">
+  <link rel="stylesheet" href="./WDD 131 _ Week 03 _ Assignment_files/vs2015.min.css">
+  <script src="./WDD 131 _ Week 03 _ Assignment_files/ca896ddec2fd3e19_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="./WDD 131 _ Week 03 _ Assignment_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week02/">W2</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W03 Assignment: Country Page</h2>
+
+    <h3>Overview</h3>
+    <p>In this assignment, you will apply the concepts from the learning activities to the design and development of a
+      web page.
+      The subject of the page is a <strong>country or place</strong> where you live, have visited, or wish to visit.
+      There are specific, functional and developmental requirements for the page's layout, design, and content.</p>
+
+    <details class="clo">
+      <summary>Associated Course Learning Outcomes</summary>
+      <ol>
+        <li>Develop responsive web pages that follow best practices and use valid HTML and CSS.</li>
+        <li>Demonstrate proficiency with JavaScript language syntax.</li>
+        <li>Use JavaScript to respond to events and dynamically modify HTML.</li>
+        <li>Demonstrate the traits of an effective team member including clear communication, collaboration, fulfilling
+          assignments, and meeting deadlines.</li>
+      </ol>
+    </details>
+
+    <h4>Task</h4>
+    <p>Design and build a single webpage using the following <strong>wireframe</strong> as the layout and content
+      location guide:</p>
+
+    <details>
+      <summary><strong>Wireframe Designs and Example Screenshots</strong></summary>
+
+      <figure>
+        <img src="./WDD 131 _ Week 03 _ Assignment_files/place-mobile.drawio.png" alt="Wireframe in Mobile View">
+        <figcaption>Wireframe design of the page in mobile view</figcaption>
+      </figure>
+      <figure>
+        <img src="./WDD 131 _ Week 03 _ Assignment_files/place-wide.drawio.png" alt="Wireframe in a Wider View">
+        <figcaption>Wireframe design of the page in a wider view</figcaption>
+      </figure>
+      <figure>
+        <img src="./WDD 131 _ Week 03 _ Assignment_files/place-sm-full.png" alt="Screenshot example of Place page in mobile view" width="390">
+        <figcaption>Example Page in Mobile View</figcaption>
+      </figure>
+      <figure>
+        <img src="./WDD 131 _ Week 03 _ Assignment_files/place-lg-1160.png" alt="Screenshot example of Place page in a wider view">
+        <figcaption>Example Page in a Wider View</figcaption>
+      </figure>
+    </details>
+
+    <div class="callout info">
+      <p>You can create your own free <strong>wireframe</strong> designs using the online application <a href="https://app.diagrams.net/" target="_blank" rel="noopener">jGraph-Diagrams.net</a>, or you can download
+        and install the <a href="https://github.com/jgraph/drawio-desktop/releases" target="_blank" rel="noopener">JGraph</a> program on your computer. There are many other viable wireframe design applications,
+        including <a href="https://moqups.com/" target="_blank" rel="noopener">Moqups</a>. Note that you will need to
+        create your own wireframe designs later in the course.</p>
+    </div>
+
+    <h3>Instructions</h3>
+    <h4 class="step">File and Folder Setup</h4>
+    <ol>
+      <li>In your <strong>wdd131</strong> local repository folder, add a new HTML file named
+        "<strong>place.html</strong>".</li>
+      <li>Add a CSS file or files in the appropriate subfolder.
+        <div class="callout info">
+          <p>You may elect to organize this assignment's media queries using one CSS file or multiple CSS files.</p>
+        </div>
+      </li>
+      <li>Add a JavaScript file to the appropriate subfolder.</li>
+    </ol>
+    <h4 class="step">HTML</h4>
+    <ol>
+      <li>Include the standard HTML document and <code>&lt;head&gt;</code> elements.
+        <div class="callout info">
+          <p>
+            Refer to the <a href="https://byui-cse.github.io/cse-ww-program/student/dev-standards.html" target="_blank" rel="noopener">frontend development
+              standards</a> if you need to review standards.
+          </p>
+        </div>
+      </li>
+      <li>Be sure to link your <strong>css</strong> file(s).</li>
+      <li>Reference your <strong>js</strong> file using a <code>defer</code> attribute.</li>
+      <li>Create the structure and layout for the page by referencing the wireframe and example
+        screenshots given
+        above.
+        <div class="callout warning">
+          <p><strong>Important</strong>: It is required that you match the wireframe components and
+            basic positioning of those components as shown in the wireframes.</p>
+        </div>
+      </li>
+      <li>The <strong>"hero" images</strong> must utilize the <code>srcset</code> responsive
+        design method to provide different images based on screen size. You can choose to implement
+        this requirement by using either the <code>picture</code> element or a basic
+        <code>img</code> approach.
+        Ensure that the images subjects and dimensions support the page's subject, design, and layout.
+      </li>
+    </ol>
+
+    <h4 class="step">Assets</h4>
+    <p>You have the option to use your own images or select from stock photos available on <a href="https://pexels.com/" target="_blank" rel="noopener">pexels.com</a> or <a href="https://unsplash.com/" target="_blank" rel="noopener">unsplash.com</a>, as well as other resources.</p>
+    <div class="callout warning">
+      <p>
+        Ensure compliance with licensing requirements and provide appropriate credentials if necessary. Many images on
+        these sites are free to use and do not require <a href="https://www.linkedin.com/advice/1/how-do-you-correctly-attribute-external-icons-images#:~:text=Attribution%20means%20giving%20credit%20to,it%20on%20your%20web%20pages." target="_blank" rel="noopener">attributions</a>, however it is always important to review the licensing terms.
+      </p>
+    </div>
+
+    <figure class="floatright advfigure">
+      <img src="./WDD 131 _ Week 03 _ Assignment_files/iconfinder-svg.png" alt="Screenshot of IconFinder.com download for SVG" width="200">
+      <figcaption>Screenshot of iconfinder.com download options</figcaption>
+    </figure>
+
+    <ol>
+      <li>Use the <strong>WebP</strong> image format for the hero images.</li>
+      <li>Use the <strong>SVG</strong> image format for the weather icon in the mobile view.
+        <div class="callout info">
+          <p>An svg can be downloaded via most icon service sites like <a href="https://www.iconfinder.com/search?q=sunshine&amp;price=free&amp;license=gte__2">iconfinder.com</a>.</p>
+        </div>
+      </li>
+      <li>Use an emoticon or equivalent for the weather icon ⛅ in the wider view by the "Weather" heading.
+        <div class="callout info">
+          <p>The weather will be static at this point, so pick an image/icon that matches your stated conditions.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h4 class="step">CSS</h4>
+    <div class="callout warning">
+      <p>
+        <strong>Important</strong>: You are responsible to implement good design principles of alignment, color
+        contrast, proximity, repetition, white space, and general usability in all of your work.
+      </p>
+    </div>
+    <ol>
+      <li>Select a color scheme that supports the country or place.
+        <div class="callout info">
+          <p>For example, the webpages screenshotted above use the colors of the Madagascar's flag.</p>
+        </div>
+      </li>
+      <li>The typography choice is up to you.</li>
+      <li>The minimum styling requirements include:
+        <ol>
+          <li>Matching the <strong>layouts</strong> shown in the wireframes</li>
+          <li>Using a <strong>media query</strong> or queries.</li>
+          <li>Using <strong>global CSS variables</strong>.</li>
+          <li>Using a <strong>pseudo element</strong> for the weather icon in the large view located after the heading
+            "Weather".</li>
+        </ol>
+      </li>
+    </ol>
+
+    <h4 class="step">JavaScript</h4>
+    <ol>
+      <li>The <strong>footer</strong> of the page must include the current year and the date the document was last
+        modified.</li>
+      <li>In your JavaScript file, provide the code to support the following requirements:
+        <ol>
+          <li>Use JavaScript to display the <strong>windchill factor</strong> in the "Weather"
+            section of the page as shown in the examples. The windchill factor should be calculated and displayed when
+            the page loads.
+          </li>
+          <li>At this point in the course, you should <strong>define variables</strong> that use
+            static values for the temperature and wind speed, matching the static, displayed values
+            you have in your weather section content.
+            <div class="callout info">
+              <p>The next course will cover how to use third-party APIs to get real-time weather data.</p>
+            </div>
+          </li>
+          <li>Write a function named "<code>calculateWindChill</code>" that returns the windchill factor when passed the
+            necessary arguments (temperature and wind speed). The function should use one line of code that returns the
+            result of the windchill calculation. Your formula should be based upon the location's preferred units (°C or
+            °F).
+            <div class="callout ai">
+              <p>Using AI to help determine this formula might be a good approach.</p>
+            </div>
+          </li>
+          <li>Do <strong>not</strong> call the <strong>calculateWindChill</strong> function unless the following
+            conditions are met:
+            <table>
+              <tbody><tr>
+                <th colspan="3">Viable Wind Chill Calculations</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>Metric</th>
+                <th>Imperial (English)</th>
+              </tr>
+              <tr>
+                <th>Temperature</th>
+                <td>&lt;= 10 °C</td>
+                <td>&lt;= 50 °F</td>
+              </tr>
+              <tr>
+                <th>Wind speed</th>
+                <td>&gt; 4.8 km/h</td>
+                <td>&gt; 3 mph</td>
+              </tr>
+            </tbody></table>
+            If the conditions are not met, then display "N/A", which means "not applicable".
+            <div class="callout info">
+              <p>Right now your code is using static inputs, but you want to have this provision coded in preparation
+                for using dynamic, real-time inputs.</p>
+            </div>
+          </li>
+        </ol>
+
+      </li>
+
+    </ol>
+
+    <h4 class="step">Testing</h4>
+
+    <ol>
+      <li>Continuously check your work by rendering the page locally using Live/Five Server in VS Code.</li>
+      <li>Use the browser's <strong>DevTools</strong> to check for JavaScript runtime errors in the
+        console or click the red error icon in the upper right corner of DevTools.</li>
+
+      <li>Use DevTools <a href="https://developer.chrome.com/docs/devtools/css-overview/" target="_blank" rel="noopener">CSS Overview</a> to check your color contrast.</li>
+      <li>Generate the DevTools <strong>Lighthouse</strong> report and run diagnostics for Accessibility, Best
+        Practices, and SEO in both the mobile and desktop views.
+        <div class="callout warning">
+          <p>
+            It is best to test your page in a <strong>Private</strong> or <strong>Incognito</strong> browser window.
+          </p>
+        </div>
+        <div class="callout warning">
+          <p>Do not worry if the Best Practices report comes back low for the use of a content delivery network. We are
+            using the Church's media library on purpose.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h3>Audit and Submission</h3>
+    <ol>
+      <li>Commit your local repository and push or upload your work to your GitHub Pages enabled
+        wdd 131 repository on GitHub.</li>
+      <li>Use this ✔ <a href="https://byui-cse.github.io/wdd131-ww-course/week03/.https://byui-cse.github.io/wdd-audits/wdd131-w03-place.html">Page Audit Tool</a> to check basic HTML and CSS standards
+        and requirements.
+      </li>
+      <li><strong>Share</strong> your work by posting your URL in the course's Microsoft Teams <strong>Week 03 Forum</strong> and comment on your peers' work by providing constructive feedback.</li>
+      <li>Return to Canvas and submit the correct GitHub Pages enabled URL.
+        <pre><code class="text hljs language-plaintext">https://your-github-username.github.io/wdd131/place.html</code></pre>
+      </li>
+    </ol>
+
+    <hr>
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03/index.html">Week 03 Home</a></span>
+    </nav>
+
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 131 _ Week 03 _ Assignment_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+
+
+</body></html>

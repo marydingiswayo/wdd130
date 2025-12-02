@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://byui-cse.github.io/wdd131-ww-course/week04/assignment-04.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | Week 4 | Assignment</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 131 _ Week 4 _ Assignment_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 131 _ Week 4 _ Assignment_files/course.css">
+  <link rel="stylesheet" href="./WDD 131 _ Week 4 _ Assignment_files/vs2015.min.css">
+  <script src="./WDD 131 _ Week 4 _ Assignment_files/ca896ddec2fd3e19_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="./WDD 131 _ Week 4 _ Assignment_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week02/">W2</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03/">W3</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W04 Assignment: Picture Album Enhancement</h2>
+
+    <h3>Overview</h3>
+    <p>This assignment applies the concepts presented in the learning activities to enhance a
+      previous assignment by incorporating lazy loading and by making the webpage responsive to user interaction by
+      filtering the displayed temple data.</p>
+
+    <details class="clo">
+      <summary>Associated Course Learning Outcomes</summary>
+      <ol>
+        <li>Develop responsive web pages that follow best practices and use valid HTML and CSS.</li>
+        <li>Demonstrate proficiency with JavaScript language syntax.</li>
+        <li>Use JavaScript to respond to events and dynamically modify HTML.</li>
+        <li>Demonstrate the traits of an effective team member, including clear communication,
+          collaboration, fulfilling assignments, and meeting deadlines.</li>
+      </ol>
+    </details>
+
+    <h3>Task</h3>
+    <p>Enhance a previous webpage assignment by adding the new required features and using provided temple data.
+    </p>
+
+    <h3>Instructions</h3>
+
+    <ol>
+      <li>Make a <strong>copy</strong> of your <strong>temples.html</strong> from Week 02 and rename it
+        "<strong>filtered-temples.html</strong>"</li>
+      <li>Make a <strong>copy</strong> of any associated <strong>CSS</strong> and
+        <strong>JS</strong> files as well and <strong>rename</strong> them appropriately, making sure they work with
+        your new HTML
+        file.
+      </li>
+      <li>In the HTML, <strong>delete</strong> all the temple figures/images HTML elements used on
+        the original page (you should have had nine (9) or more).
+        <div class="callout info">
+          <p>We will be replacing these figures with dynamically generated HTML using JavaScript.</p>
+        </div>
+
+      </li>
+
+      <li><strong>Copy</strong> the following code <strong>array</strong> named
+        "<strong>temples</strong>" which
+        consists of a sample of temple <strong>objects</strong> and place the array into your own
+        JavaScript file.
+        <details>
+          <summary>Array of Temple Objects</summary>
+          <pre>        <code class="JavaScript hljs language-JavaScript"><span class="hljs-keyword">const</span> temples = [
+  {
+    <span class="hljs-attr">templeName</span>: <span class="hljs-string">"Aba Nigeria"</span>,
+    <span class="hljs-attr">location</span>: <span class="hljs-string">"Aba, Nigeria"</span>,
+    <span class="hljs-attr">dedicated</span>: <span class="hljs-string">"2005, August, 7"</span>,
+    <span class="hljs-attr">area</span>: <span class="hljs-number">11500</span>,
+    <span class="hljs-attr">imageUrl</span>:
+    <span class="hljs-string">"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"</span>
+  },
+  {
+    <span class="hljs-attr">templeName</span>: <span class="hljs-string">"Manti Utah"</span>,
+    <span class="hljs-attr">location</span>: <span class="hljs-string">"Manti, Utah, United States"</span>,
+    <span class="hljs-attr">dedicated</span>: <span class="hljs-string">"1888, May, 21"</span>,
+    <span class="hljs-attr">area</span>: <span class="hljs-number">74792</span>,
+    <span class="hljs-attr">imageUrl</span>:
+    <span class="hljs-string">"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"</span>
+  },
+  {
+    <span class="hljs-attr">templeName</span>: <span class="hljs-string">"Payson Utah"</span>,
+    <span class="hljs-attr">location</span>: <span class="hljs-string">"Payson, Utah, United States"</span>,
+    <span class="hljs-attr">dedicated</span>: <span class="hljs-string">"2015, June, 7"</span>,
+    <span class="hljs-attr">area</span>: <span class="hljs-number">96630</span>,
+    <span class="hljs-attr">imageUrl</span>:
+    <span class="hljs-string">"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"</span>
+  },
+  {
+    <span class="hljs-attr">templeName</span>: <span class="hljs-string">"Yigo Guam"</span>,
+    <span class="hljs-attr">location</span>: <span class="hljs-string">"Yigo, Guam"</span>,
+    <span class="hljs-attr">dedicated</span>: <span class="hljs-string">"2020, May, 2"</span>,
+    <span class="hljs-attr">area</span>: <span class="hljs-number">6861</span>,
+    <span class="hljs-attr">imageUrl</span>:
+    <span class="hljs-string">"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"</span>
+  },
+  {
+    <span class="hljs-attr">templeName</span>: <span class="hljs-string">"Washington D.C."</span>,
+    <span class="hljs-attr">location</span>: <span class="hljs-string">"Kensington, Maryland, United States"</span>,
+    <span class="hljs-attr">dedicated</span>: <span class="hljs-string">"1974, November, 19"</span>,
+    <span class="hljs-attr">area</span>: <span class="hljs-number">156558</span>,
+    <span class="hljs-attr">imageUrl</span>:
+    <span class="hljs-string">"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"</span>
+  },
+  {
+    <span class="hljs-attr">templeName</span>: <span class="hljs-string">"Lima Perú"</span>,
+    <span class="hljs-attr">location</span>: <span class="hljs-string">"Lima, Perú"</span>,
+    <span class="hljs-attr">dedicated</span>: <span class="hljs-string">"1986, January, 10"</span>,
+    <span class="hljs-attr">area</span>: <span class="hljs-number">9600</span>,
+    <span class="hljs-attr">imageUrl</span>:
+    <span class="hljs-string">"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"</span>
+  },
+  {
+    <span class="hljs-attr">templeName</span>: <span class="hljs-string">"Mexico City Mexico"</span>,
+    <span class="hljs-attr">location</span>: <span class="hljs-string">"Mexico City, Mexico"</span>,
+    <span class="hljs-attr">dedicated</span>: <span class="hljs-string">"1983, December, 2"</span>,
+    <span class="hljs-attr">area</span>: <span class="hljs-number">116642</span>,
+    <span class="hljs-attr">imageUrl</span>:
+    <span class="hljs-string">"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"</span>
+  },
+  <span class="hljs-comment">// Add more temple objects here...</span>
+];</code></pre>
+        </details>
+        <div class="callout info">
+          <p>
+            Here is one resource for temple data: <a href="https://churchofjesuschristtemples.org/temples/" target="_blank" rel="noopener">ChurchofJesusChristTemples.org</a>
+          </p>
+        </div>
+      </li>
+      <li><strong>Add</strong> an additional three (3) or more temple objects to your array making sure to match the
+        given properties with matching and relevant key-value pairs.</li>
+      <li>Loop through the array and create "temple cards" for each temple by displaying:
+        <ul class="check">
+          <li>The <strong>name</strong> of the temple.</li>
+          <li>The <strong>location</strong> of the temple.</li>
+          <li>The date the temple was <strong>dedicated</strong>.</li>
+          <li>The total <strong>area</strong> of the temple in square feet.</li>
+          <li>The provided <strong>image</strong> of the temple (an absolute address), making sure to include an
+            appropriate <code>alt</code> value such as the name of the temple.</li>
+          <li>Use <strong>native lazy loading</strong> for each temple image.</li>
+        </ul>
+        <figure>
+          <img src="./WDD 131 _ Week 4 _ Assignment_files/temples-data.png" alt="Screenshot Example of a Temple Card Design">
+          <figcaption>Screenshot Example of a Temple Card Design</figcaption>
+        </figure>
+      </li>
+      <li>Respond to the main navigation menu items by filtering and displaying the temples as
+        follows:
+        <ul class="check">
+          <li><strong>Old</strong> – temples built before 1900</li>
+          <li><strong>New</strong> – temples built after 2000</li>
+          <li><strong>Large</strong> – temples larger than 90,000 square feet</li>
+          <li><strong>Small</strong> – temples smaller than 10,000 square feet</li>
+          <li><strong>Home</strong> – displays all the temples stored in the array.</li>
+        </ul>
+        <div class="callout info">
+          <p><strong>Video Demonstration</strong>: ▶️ <a href="https://www.loom.com/share/af4f1ddda0b84204b214f72b544c02b3" target="_blank" rel="noopener">Developing an Array Filter</a> – <span class="smaller">[ 11 minutes ]</span>
+          </p>
+        </div>
+      </li>
+
+      <li>As always, be sure to support the <code>footer</code> copyright year and date last
+        modified output through a valid JavaScript reference.</li>
+    </ol>
+
+    <h4>Testing</h4>
+    <ol>
+      <li>Continuously check your work by rendering the page locally using Live/Five Server in VS Code.</li>
+      <li>Use the browser's DevTools to check for JavaScript runtime errors in the console or click
+        the red, error icon in the upper right corner of DevTools.</li>
+      <li>Generate the browser's DevTools Lighthouse report and run diagnostics for
+        Accessibility, Best Practices, and SEO in both the mobile and desktop views.
+        <div class="callout warning">
+          It is best to test your page in a <strong>Private</strong> or
+          <strong>Incognito</strong> browser window when using DevTools Lighthouse.
+        </div>
+        <div class="callout warning">
+          <p>Note: Using the absolute references to images on the Church's content delivery network can lead to some
+            less favorable performance issues. You can ignore this or go ahead and create local copies of temple images
+            that are optimized. Be aware of copyrights.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h3>Audit and Submission</h3>
+    <ol>
+      <li>Commit your local repository and push or upload your work to your GitHub Pages enabled
+        <code>wdd131</code> repository on GitHub.
+      </li>
+      <li>Use this ✔ <a href="https://byui-cse.github.io/wdd-audits/wdd131-w04-picture-album.html">Page Audit Tool</a> to check basic HTML and CSS
+        standards and
+        requirements.</li>
+      <li><strong>Share</strong> your work by posting your URL in the course's Microsoft Teams <strong>Week 04 Forum</strong> and comment on your peers' work by providing constructive feedback.</li>
+      <li>Return to Canvas and submit your GitHub Pages enabled URL. Example given:
+        <pre><code class="text hljs language-plaintext">https://your-github-username.github.io/wdd131/filtered-temples.html</code></pre>
+      </li>
+    </ol>
+
+    <hr>
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04/index.html">Week 04 Home</a></span>
+    </nav>
+
+  </main>
+
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+
+  <script src="./WDD 131 _ Week 4 _ Assignment_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+
+
+</body></html>

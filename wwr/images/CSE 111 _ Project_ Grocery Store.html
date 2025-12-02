@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://byui-cse.github.io/cse111-ww-course/week05/project.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 111 | Project: Grocery Store</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program-pt/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./CSE 111 _ Project_ Grocery Store_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./CSE 111 _ Project_ Grocery Store_files/course.css">
+  <link rel="stylesheet" href="./CSE 111 _ Project_ Grocery Store_files/math.css">
+  <link rel="stylesheet" href="./CSE 111 _ Project_ Grocery Store_files/vs2015.min.css">
+  <script type="text/javascript" src="./CSE 111 _ Project_ Grocery Store_files/620f7e0f8d21af1a_complete.js.download" crossorigin="anonymous"></script>
+  <script src="./CSE 111 _ Project_ Grocery Store_files/highlightjs-copy.min.js.download"></script>
+  <link rel="stylesheet" href="./CSE 111 _ Project_ Grocery Store_files/highlightjs-copy.min.css">
+<style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
+
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 111<span id="coursetitle">: Programming with Functions</span></h1>
+      <img src="./CSE 111 _ Project_ Grocery Store_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav id="autogen-top-nav">
+      <!-- This nav is auto-generated -->
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/index.html">Home</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week01/index.html">W1</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week02/index.html">W2</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week03/index.html">W3</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week04/index.html">W4</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/cse111-ww-course/week05/index.html">W5</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week06/index.html">W6</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week07/index.html">W7</a></span>
+      <!-- end auto-generated -->
+    </nav>
+    <h2>W05 Project: Grocery Store</h2>
+    <h3 id="purpose">Purpose</h3>
+    <p>Prove that you can write a Python program that reads CSV files and creates, populates, and uses a dictionary.</p>
+    <h3>Project</h3>
+    <div class="callout error">
+      <p><strong>Do not use AI to generate the code for this program.</strong></p>
+      <p>Using AI to generate this program is a violation of the course AI policy and may result in receiving a 0 on the assignment, failing the course, or being removed from the program.</p>
+      <p>If you need help on the assignment or have questions about AI use, please ask your instructor.</p>
+    </div>
+    <h4>Background</h4>
+    <p>Your uncle has a grocery store, he has just started to use an online service that enables his customers to order
+      groceries online. After a customer completes an order, the online service sends a CSV file that contains the
+      customer’s requests to the grocery store. Your uncle has asked you to write a program that reads the CSV file and
+      prints to the terminal window a receipt that lists the purchased items and shows the subtotal, the sales tax
+      amount, and the total.</p>
+    <h4>User Requirements</h4>
+    <p>The program must read two csv files, the customer's order and a product catalog. Each item in the customer's
+      order will be looked up in the product catalog to get get the current price. An order will be displayed in the
+      terminal that shows the customer's order details. Use the following details to create the program.</p>
+    <ol class="nested">
+      <li>Read the products inventory from the file <strong><code>products.csv</code></strong>.</li>
+      <li>Read the customer's order from the file <strong><code>request.csv</code></strong></li>
+      <li>For each item in the order, look up the product in the catalog. Use the catalog information to calculate and
+        display the order.</li>
+      <li>Display the order receipt.
+        <ol>
+          <li>Print a store name (you choose the name) at the top of the receipt.</li>
+          <li>Print the list of ordered items. Include the item name, quantity ordered and price per item.</li>
+          <li>Sum and print the number of ordered items.</li>
+          <li>Sum and print the subtotal due.</li>
+          <li>Compute and print the sales tax amount. Use 6% as the sales tax rate.</li>
+          <li>Compute and print the total amount due.</li>
+          <li>Print a thank you message.</li>
+          <li>Get the current date and time from your computer’s operating system and print the current date and time.
+          </li>
+          <li>Include a <code>try</code> block and <code>except</code> blocks to handle <code>FileNotFoundError</code>,
+            <code>PermissionError</code>,
+            and <code>KeyError</code>.
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <h4>Design</h4>
+    <p>The bulk of the work for this program is performed in the <strong><code>main</code></strong> function. Make sure
+      you include error handling as described in the user requirements.</p>
+    <h5 id="specs">Function Specifications</h5>
+    <table id="function_specs">
+      <tbody><tr>
+        <th>Function Name</th>
+        <th>Parameters<br>Return Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>read_dictionary</td>
+        <td><strong>Parameters</strong><br>filename,<br>key_column_index<br>
+          <strong>Return Tpe</strong><br>Dictionary
+        </td>
+        <td>This function reads the product data from the csv file passed to the function in the
+          <strong>filename</strong> parameter. The dictionary key is contained in the csv data column indicated by the
+          <strong>key_column_index</strong> parameter, the value of each dictionary item is the list derived from the
+          values in the row of the csv file. Function returns a dictionary of products.
+        </td>
+      </tr>
+      <tr>
+        <td>main</td>
+        <td></td>
+        <td>Reads the <strong>receipt.csv</strong> file, processes the file and displays the receipt according to the
+          user requirements.</td>
+      </tr>
+
+
+    </tbody></table>
+    <h4>Helpful information.</h4>
+    <ul>
+      <li class="tutorial">
+        <div>
+          The Reading Files article explains how to setup VS Code so that your Python program can
+          <a href="https://byui-cse.github.io/cse111-ww-course/week05/file-setup.html">read from a text file</a>.
+        </div>
+      </li>
+      <li class="tutorial">
+        <div>
+          The preparation content for this lesson shows how to read the contents of a
+          <a href="https://byui-cse.github.io/cse111-ww-course/week05/prepare-1.html#csv_to_dict">CSV file into a compound dictionary</a> and how to read and
+          <a href="https://byui-cse.github.io/cse111-ww-course/week05/prepare-1.html#process_rows">process a CSV file</a>
+          without storing it in a dictionary.
+        </div>
+      </li>
+      <li class="tutorial">
+        <div>The preparation content for week 4 explains how to <a href="https://byui-cse.github.io/cse111-ww-course/week04/prepare-2.html#find_one">find an item
+            in a dictionary</a>.</div>
+      </li>
+      <li class="video">
+        <div>
+          The video titled <a href="https://video.byui.edu/media/t/1_rsixa1da">How to Read and Use a Dictionary</a>
+          <span class="duration">(34 minutes)</span>
+          shows a BYU-Idaho faculty member solving a problem that is similar to this prove assignment.
+        </div>
+      </li>
+    </ul>
+    <h3 id="milestone">Milestone</h3>
+    <p>Start your project by writing and testing the <code>read_dictionary</code> function.</p>
+    <ol>
+      <li>Create a folder for this week's project, name it whatever you want.</li>
+      <li>Open the folder you just created in VSCode.</li>
+      <li>Download both of these files: <a download="" href="https://byui-cse.github.io/cse111-ww-course/week05/samples/products.csv"><code>products.csv</code></a> and <a download="" href="https://byui-cse.github.io/cse111-ww-course/week05/samples/request.csv"><code>request.csv</code></a> and save them in your project's folder.
+      </li>
+      <li>Open the <code>products.csv</code> file in VS Code and examine it. Notice that each row in this file contains
+        three values separated by commas: a product number, a product name, and a retail price. Also, notice that each
+        product number in the <code>products.csv</code> file is unique. This means that your program can read the
+        <code>products.csv</code> file into a dictionary and use the product numbers as keys in the dictionary.
+      </li><li>Create a file named <code>receipt.py</code> in your project folder.</li>
+      <li>Code the <code>read_dictionary</code> function. It should open a CSV file for reading and use a
+        <code>csv.reader</code> to read each row and populate a compound dictionary with the contents of the
+        <code>products.csv</code> file.
+      </li>
+      <li>Create the <code>main</code> function and add the following features.
+        <ol>
+          <li>Call the <code>read_dictionary</code> function, store the returned dictionary in the variable
+            <var>products_dict</var>.
+          </li>
+          <li>Display the dictionary.</li>
+          <li>Open the <code>request.csv</code> file for reading.</li>
+          <li>Skip the first line of the <code>request.csv</code> file because the first line contains column headings.
+          </li>
+          <li>Uses a loop to read and processes each row from the <code>request.csv</code> file. Within the body of the
+            loop, your program must do the following for each row:
+            <ol>
+              <li>Use the requested product number to find the corresponding item in the <var>products_dict</var>.</li>
+              <li>Print the product name, requested quantity, and product price.</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>At the bottom of your <code>receipt.py</code> file, add a call to the <code>main</code> function. Be certain
+        to protect the call to <code>main</code> with an <code>if</code> statement as taught in the <a href="https://byui-cse.github.io/cse111-ww-course/week03/prepare-1.html#separate">preparation content for week 3</a>.</li>
+    </ol>
+    <h4 id="testing">Testing Procedure</h4>
+    <p>Verify that your program works correctly by following each step in this testing procedure:</p>
+    <ol>
+      <li>Download the <a download="" href="https://byui-cse.github.io/cse111-ww-course/week05/samples/test_products.py"><code>test_products.py</code></a> file and save it
+        in the same folder where you saved your <code>receipt.py</code> program. Run the <code>test_products.py</code>
+        file and ensure that the <code>test_read_dictionary</code> function passes. If it doesn’t pass, there is a
+        mistake in your <code>read_dictionary</code> function. Read the output from <code>pytest</code>, fix the
+        mistake, and run the <code>test_products.py</code> file again until the test function passes.
+        <pre class="console">&gt; python test_products.py
+=================== test session starts ====================
+platform win32--Python 3.8.6, pytest-6.1.2, py-1.9.0, pluggy
+rootdir: C:\Users\cse111\week05
+collected 1 item
+test_products.py::test_read_dictionary <span class="pass">PASSED         [100%]</span>
+<span class="pass">==================== 1 passed in 0.12s =====================</span></pre>
+      </li>
+      <li>Run your program and verify that it prints the <var>products</var> dictionary and requested items as shown in
+        the sample output below.
+        <pre class="console">&gt; python receipt.py
+All Products
+{'D150': ['D150', '1 gallon milk', '2.85'], 'D083': ['D083',
+'1 cup yogurt', '0.75'], 'D215': ['D215', '1 lb cheddar
+cheese', '3.35'], 'P019': ['P019', 'iceberg lettuce',
+'1.15'], 'P020': ['P020', 'green leaf lettuce', '1.79'],
+'P021': ['P021', 'butterhead lettuce', '1.83'], 'P025':
+['P025', '8 oz arugula', '2.19'], 'P143': ['P143', '1 lb
+baby carrots', '1.39'], 'W231': ['W231', '32 oz granola',
+'3.21'], 'W112': ['W112', 'wheat bread', '2.55'], 'C013':
+['C013', 'twix candy bar', '0.85'], 'H001': ['H001', '8
+rolls toilet tissue', '6.45'], 'H014': ['H014', 'facial
+tissue', '2.49'], 'H020': ['H020', 'aluminum foil', '2.39'],
+'H021': ['H021', '12 oz dish soap', '3.19'], 'H025':
+['H025', 'toilet cleaner', '4.50']}
+Requested Items
+wheat bread: 2 @ 2.55
+1 cup yogurt: 4 @ 0.75
+32 oz granola: 1 @ 3.21
+twix candy bar: 2 @ 0.85
+1 cup yogurt: 3 @ 0.75</pre>
+      </li>
+    </ol>
+    <h4>Milestone Submission</h4>
+    <p>On or before the due date, return to <a href="https://byupw.instructure.com/calendar#view_name=agenda">Canvas</a>
+      and report your progress on this milestone.</p>
+
+    <h3 id="project-completion">Project Completion</h3>
+    <p>Finish your project by completing main function. Ensure your code accomplishes ALL the requirements specified
+      above.</p>
+    <ol>
+      <li>Remove the line that prints the product dictionary</li>
+      <li>Add the remaining code necessary to fulfill the user requirement #4.</li>
+    </ol>
+    <h4>Helpful Information</h4>
+    <ul>
+      <li>The <a href="https://byui-cse.github.io/cse111-ww-course/week05/prepare-2.html">preparation content</a> for this lesson explains how to handle exceptions.</li>
+    </ul>
+    <h4>Testing</h4>
+    <p>Verify that your program works correctly by following each step in this testing procedure:</p>
+    <ol>
+      <li>Run your program and verify that it prints a receipt formatted similarly to the one shown below. Your program
+        must print the current date and time with exactly the same formatting as shown below. Also, verify that your
+        program computes the number of items, subtotal, sales tax, and total as shown below.
+        <pre class="console">&gt; python receipt.py
+Inkom Emporium
+wheat bread: 2 @ 2.55
+1 cup yogurt: 4 @ 0.75
+32 oz granola: 1 @ 3.21
+twix candy bar: 2 @ 0.85
+1 cup yogurt: 3 @ 0.75
+Number of Items: 12
+Subtotal: 15.26
+Sales Tax: 0.92
+Total: 16.18
+Thank you for shopping at the Inkom Emporium.
+Wed Nov  4 05:10:30 2020</pre>
+      </li>
+      <li>
+        <div>
+          <p>
+            Verify that the <code>except</code> block to handle <code>KeyError</code> that you added to your program
+            works correctly by doing the
+            following:
+          </p>
+          <ol>
+            <li>Temporarily add the following line to the end of your <code>request.csv</code> file and then save the
+              file.
+              <pre class="csv">R002,5</pre>
+            </li>
+            <li>
+              <div>Run your program again and verify that it prints an error message like the one shown below.
+                <pre class="console">&gt; python receipt.py
+Error: unknown product ID in the request.csv file
+'R002'</pre>
+                Hint: if you wrote an <code>except</code> block in your program to handle <code>KeyError</code> and
+                added "R002,5" to the <code>request.csv</code> file and saved the <code>request.csv</code> file and ran
+                your program but your program isn’t raising a <code>KeyError</code>, then look in your program to see if
+                you wrote an <code>if</code> statement before the statement that finds a value in the
+                <var>products</var> dictionary. Look for code similar to this:
+                <div>
+                  <pre class="hljs-copy-wrapper"><code class="language-python hljs" data-highlighted="yes"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1"><span class="hljs-keyword">if</span> prod_num <span class="hljs-keyword">in</span> products_dict:</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">    prod_info_list = products_dict[prod_num]</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">    ⋮</td></tr></tbody></table></code><div class="hljs-copy-container" data-autohide="false" style="--hljs-theme-background: rgb(30, 30, 30); --hljs-theme-color: rgb(220, 220, 220); --hljs-theme-padding: 12px;"><button class="hljs-copy-button" data-copied="false">Copy</button></div></pre>
+                </div>
+                If your program contains an <code>if</code> statement similar to the one above, then the <code>if</code>
+                statement is probably preventing your program from raising a <code>KeyError</code>. Delete the
+                <code>if</code> statement and unindent the lines of code inside the <code>if</code> statement and test
+                your program again.
+              </div>
+            </li>
+          </ol>
+        </div>
+      </li>
+      <li>
+        <div>Verify that the <code>except</code> block to handle <code>FileNotFoundError</code> that you added to your
+          program works correctly by
+          doing the following:
+          <ol>
+            <li>
+              <div>Temporarily delete or rename the <code>products.csv</code> file.</div>
+            </li>
+            <li>
+              Run your program again and verify that it prints an error message like the one shown below.
+              <pre class="console">&gt; python receipt.py
+Error: missing file
+[Errno 2] No such file or directory: 'products.csv'</pre>
+            </li>
+          </ol>
+        </div>
+      </li>
+    </ol>
+    <h5>Exceeding the Requirements</h5>
+    <p>If your program fulfills the requirements for this assignment as described above, your program will earn 93% of
+      the possible points. In order to earn the remaining 7% of points, you will need to add one or more features to
+      your program so that it exceeds the requirements. Use your creativity to add features. Add a comment to the top of
+      your code that explains your enhancement(s).</p>
+    <ul>
+      <li>Write code to print a reminder of how many days until the New Years Sale begins (Jan 1) at the bottom of the
+        receipt.</li>
+      <li>Write code to print a "return by" date that is 9:00 PM 30 days in the future at the bottom of the receipt.
+      </li>
+      <li><strong>Challenge:</strong> Write code that will give a buy one, get one half off discount for item D083. For
+        example if the customer orders one item it will be full price. If the customer orders two items the first item
+        is full price the second one is discounted 50%. For three items two would be at full price and one at 50% off.
+        Indicate the discounted price on the receipt.</li>
+      <li> Write code to print a coupon at the bottom of the receipt. Write the code so that it will always print a
+        coupon for one of the products ordered by the customer.</li>
+    </ul>
+    <div class="callout warning">
+      <div class="callout-title">Document your enhancements:</div>
+      <p>If you choose to "exceed requirements" place a comment at the top of your code file that describes what you did
+        to enhance your program.</p>
+    </div>
+
+    <h4>Project Submission</h4>
+    <p>Return to <a href="https://byupw.instructure.com/calendar#view_name=agenda">Canvas</a> and upload your <code class="python">receipt.py</code> file for feedback.</p>
+    <div class="callout error">
+      <div class="callout-title">Don't get a zero!</div>
+      <p>If an error prevents your program from running to completion the grader will score your
+        assignment with a 0 and request that you fix and resubmit your program. In other words, rather than submitting a
+        program that doesn't work, it's best to ask for help to understand how to fix the problem before submitting your
+        program.</p>
+    </div>
+    <h3>Useful Links:</h3>
+    <ol>
+      <li>Return to: <a href="https://byui-cse.github.io/cse111-ww-course/week05/index.html">Week Overview</a> | <a href="https://byui-cse.github.io/cse111-ww-course/index.html">Course Home</a></li>
+    </ol>
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./CSE 111 _ Project_ Grocery Store_files/highlight.min.js.download"></script>
+  <script src="./CSE 111 _ Project_ Grocery Store_files/highlightjs-line-numbers.min.js.download"></script>
+  <script>
+    hljs.highlightAll();
+    hljs.addPlugin(
+      new CopyButtonPlugin({
+        autohide: false, // Always show the copy button
+      })
+    );
+    hljs.initLineNumbersOnLoad();
+  </script>
+
+
+</body></html>

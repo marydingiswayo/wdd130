@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<!-- saved from url=(0066)https://byui-cse.github.io/cse111-ww-course/week01/code-along.html -->
+<!-- saved from url=(0066)https://byui-cse.github.io/cse111-ww-course/week03/code-along.html -->
 <html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CSE 111 | Code-along Activity</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program-pt/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
   <link href="./CSE 111 _ Code-along Activity_files/css2" rel="stylesheet">
   <link rel="stylesheet" href="./CSE 111 _ Code-along Activity_files/course.css">
   <link rel="stylesheet" href="./CSE 111 _ Code-along Activity_files/vs2015.min.css">
   <script type="text/javascript" src="./CSE 111 _ Code-along Activity_files/620f7e0f8d21af1a_complete.js.download" crossorigin="anonymous"></script>
-<style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style></head>
-
+</head>
 
 <body>
   <header>
@@ -24,178 +26,234 @@
     <nav id="autogen-top-nav">
       <!-- This nav is auto-generated -->
       <span><a href="https://byui-cse.github.io/cse111-ww-course/index.html">Home</a></span>
-      <span class="active"><a href="https://byui-cse.github.io/cse111-ww-course/week01/index.html">W1</a></span>
+      <span><a href="https://byui-cse.github.io/cse111-ww-course/week01/index.html">W1</a></span>
       <span><a href="https://byui-cse.github.io/cse111-ww-course/week02/index.html">W2</a></span>
-      <span><a href="https://byui-cse.github.io/cse111-ww-course/week03/index.html">W3</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/cse111-ww-course/week03/index.html">W3</a></span>
       <span><a href="https://byui-cse.github.io/cse111-ww-course/week04/index.html">W4</a></span>
       <span><a href="https://byui-cse.github.io/cse111-ww-course/week05/index.html">W5</a></span>
       <span><a href="https://byui-cse.github.io/cse111-ww-course/week06/index.html">W6</a></span>
       <span><a href="https://byui-cse.github.io/cse111-ww-course/week07/index.html">W7</a></span>
       <!-- end auto-generated -->
     </nav>
-    <h2>W01 Code-along Activity: Discount</h2>
+    <h2>W03 Code-along Activity: Testing and Fixing Functions</h2>
     <div class="callout info">
       <h3>Code-along Activity Overview</h3>
-      <p>For this activity, you will code along with an instructor video that walks you through each step of the activity below. Make sure that you pause the video, or watch sections over if you need to, so that you are able to complete the entire activity.</p>
+      <p>For this activity, you will code along with an instructor video that walks you through each step of the
+        activity below. Make sure that you pause the video, or watch sections over if you need to, so that you are able
+        to complete the entire activity.</p>
       <p>Your instructor will post a link to the video in Microsoft Teams.</p>
     </div>
     <h3>Background</h3>
-    <p>You work for a retail store that wants to increase sales on Tuesday and Wednesday, which are the store’s slowest sales days. On Tuesday and Wednesday, if a customer’s subtotal is $50 or greater, the store will discount the customer’s subtotal by 10%.</p>
+    <p>Most people around the world today have at least two names, a
+      family name and a given name. In the United States, we usually write
+      a person’s given name followed by his family name. However, when a
+      computer lists names in alphabetical order, it is convenient to list
+      the family name first and then the given name like this:</p>
+    <ul>
+      <li>
+        <div>Toussaint; Marie</div>
+      </li>
+      <li>
+        <div>Toussaint; Olivier</div>
+      </li>
+      <li>
+        <div>Washington; George</div>
+      </li>
+      <li>
+        <div>Washington; Martha</div>
+      </li>
+    </ul>
+    <p>When writing a program that alphabetizes names, it is often
+      helpful to have the following three functions.</p>
+    <ul class="function">
+      <li>
+        <code>make_full_name</code>: Combines a person’s given name and family name into one string with the family name
+        first.
+      </li>
+      <li><code>extract_family_name</code>: Extracts a person’s family name from his full name.</li>
+      <li><code>extract_given_name</code>: Extracts a person’s given name from his full name.</li>
+    </ul>
+    <p>A programmer has already written those three functions. However,
+      there are mistakes in at least two of the three functions.</p>
     <h3>Program</h3>
-    <p>Work along with your instructor to write a Python program that gets a customer’s subtotal as input and gets the current day of the week from your computer’s operating system. Your program must <strong>not</strong> ask the user to enter the day of the week. Instead, it must get the day of the week from your computer’s operating system.</p>
-    <p>If the subtotal is $50 or greater and today is Tuesday or Wednesday, your program must subtract 10% from the subtotal. Your program must then compute the total amount due by adding sales tax of 6% to the subtotal. Your program must print the discount amount if applicable, the sales tax amount, and the total amount due.</p>
-    <h4>Requirements</h4>
+    <p>Write three test functions named
+      <code>test_make_full_name</code>,
+      <code>test_extract_family_name</code>, and
+      <code>test_extract_given_name</code>. Each of the test functions
+      will test one of three previously written program functions. Use
+      <code>pytest</code> to run the test functions and find and fix the
+      mistakes, if any, that are in program functions.
+    </p>
+    <h3>Requirements</h3>
     <ol>
       <li>
-        <div>Your program asks the user for the subtotal but does <strong>not</strong> ask the user for the day of the week. Your program gets the day of the week from your computer’s operating system.</div>
+        <div>Write <code>test_make_full_name</code> so that it tests
+          <code>make_full_name</code> with various names, including long
+          names, short names, and hyphenated names. Fix the mistake in the
+          <code>make_full_name</code> function.
+        </div>
       </li>
       <li>
-        <div>Your program correctly computes and prints the discount amount if applicable.</div>
+        <div>Write <code>test_extract_family_name</code> so that it
+          tests <code>extract_family_name</code> with various names,
+          including long names, short names, and hyphenated
+          names.</div>
       </li>
       <li>
-        <div>Your program correctly computes and prints the sales tax amount and the total amount due.</div>
+        <div>Write <code>test_extract_given_name</code> so that it
+          tests <code>extract_given_name</code> with various names,
+          including long names, short names, and hyphenated names. Fix the
+          mistake in the <code>extract_given_name</code>
+          function.</div>
       </li>
     </ol>
     <h4>Enhancements</h4>
+    <p>Here is a list of enhancements that you could make to the program. Your instructor will walk you through at least
+      one of them. Feel free to complete others.</p>
     <ol>
       <li>
-        <div>Add code to your program that the computer will execute if today is Tuesday or Wednesday and the customer is not purchasing enough to receive the discount. This added code should compute and print the difference between $50 and the subtotal which is the additional amount the customer would need to purchase in order to receive the discount.</div>
+        <div>
+          <p>In the United States, mailing addresses are supposed
+            to be written
+            <br>in this form:
+            <span class="nowrap"><var>number</var> <var>street</var>, <var>city</var>, <var>state</var>
+              <var>zipcode</var></span>
+            <br>For example:
+            <span class="nowrap">525 S Center St, Rexburg, ID 83460</span>
+          </p>
+          <p>Download and save this Python file named
+            <a download="" href="https://byui-cse.github.io/cse111-ww-course/week03/samples/address.py">address.py</a>. Open a new Python
+            file named <code>test_address.py</code> and write a test
+            function named <code>test_extract_city</code> that verifies that
+            the <code>extract_city</code> function works correctly.
+          </p>
+        </div>
       </li>
       <li>
-        <div>Near the beginning of your program replace the code that asks the user for the subtotal with a loop that repeatedly asks the user for a price and a quantity and computes the subtotal. This loop should repeat until the user enters "0" for the quantity.</div>
+        <div>Write a test function named
+          <code>test_extract_state</code> that verifies that the
+          extract_state function works correctly.
+        </div>
+      </li>
+      <li>
+        <div>Write a test function named
+          <code>test_extract_zipcode</code> that verifies that the
+          extract_zipcode function works correctly.
+        </div>
       </li>
     </ol>
+
+
+
+
+
+
     <h3>Instructions</h3>
     <ol>
       <li>Create a folder for this week's code-along program.</li>
+      <li>Download the <a download="" href="https://byui-cse.github.io/cse111-ww-course/week03/samples/names.py">names.py</a>
+        python file and save it in your project folder you just created.</li>
       <li>Open the folder you just created in VSCode.</li>
-      <li>Create a new file named <strong>discount.py</strong>.</li>
-      <li>Find the video that your instructor has posted for this assignment and code along with them to complete each of the requirements. Work through the requirements in order with the instructor rather than jumping ahead to more complicated steps to ensure you do not miss any concepts.</li>
+      <li>Find the video that your instructor has posted for this assignment and code along with them to complete each
+        of the requirements. Work through the requirements in order with the instructor rather than jumping ahead to
+        more complicated steps to ensure you do not miss any concepts.</li>
     </ol>
     <details>
       <summary>Alternative Video Link and Transcript</summary>
-      <p>In addition to the link that your instructor posted, you are also welcome to watch the following code walkthrough or use its transcript:</p>
+      <p>In addition to the link that your instructor posted, you are also welcome to watch the following code
+        walkthrough or use its transcript:</p>
       <ul>
-        <li><a href="https://video.byui.edu/media/t/1_tz1cmuz8" target="_blank" rel="noopener">CSE 111 W01 Code-along Discount (Lindstrom)</a></li>
+        <li><a href="https://video.byui.edu/media/t/1_sf5p27iz" target="_blank" rel="noopener">CSE 111 W03 Code-along:
+            Tests (Lindstrom)</a></li>
       </ul>
     </details>
     <h3>Additional Resources</h3>
     <p>You may use these additional resources for further study.</p>
     <details>
       <summary>Sample Solution</summary>
-      <p>In addition to the instructor video, you can also view this <a class="solution" href="https://byui-cse.github.io/cse111-ww-course/week01/samples/code_along_solution.html">solution</a>. (This solution may be slightly different than the final code that you and your instructor created.)</p>
-      
+      <p>In addition to the instructor video, you can also view this <a class="solution" href="https://byui-cse.github.io/cse111-ww-course/week03/samples/code_along_solution.html">solution</a>. (This solution may be slightly different than the
+        final code that you and your instructor created.)</p>
+
     </details>
     <details>
       <summary>Helpful Documentation</summary>
+      This <a href="https://video.byui.edu/media/t/1_9ickss60">video about
+        test functions</a> <span class="duration">(20 minutes)</span>
+      shows a BYU-Idaho faculty member writing two test functions and
+      using <code>pytest</code> to run them.
 
-      <ul>
-        <li>
-          <div>The <a href="https://byui-cse.github.io/cse111-ww-course/week01/prepare-2.html">preparation content</a> for this week01 explains how to call a function and a method.</div>
-        </li>
-        <li>
-          <div>
-            <p>
-              The <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime.now"><code>datetime.now()</code> method</a> from the standard Python <code>datetime</code> module will get the current date and time from your computer’s operating system. Here is an excerpt from the official reference for the <code>datetime.now</code> method:
-            </p>
-            <dl class="function">
-              <dt>
-                <pre><code class="language-python nohljsln hljs" data-highlighted="yes">datetime.now(tz=<span class="hljs-literal">None</span>)</code></pre>
-              </dt>
-              <dd>
-                Return the current local date and time.
-                <p><var>tz</var> is optional, but if it is not <code>None</code>, it must be a <code>tzinfo</code> (time zone information) object</p>
-              </dd>
-            </dl>
-            <p>
-              The <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime.weekday"><code>weekday()</code> method</a>
-              will get an integer that represents the day of the week from a
-              <code>datetime</code> object. Here is an excerpt from the official documentation for the <code>weekday</code> method:
-            </p>
-            <dl class="function">
-              <dt>
-                <pre><code class="language-python nohljsln hljs" data-highlighted="yes">dt.weekday()</code></pre>
-              </dt>
-              <dd>Return the day of the week as an integer, where Monday is 0 and Sunday is 6.</dd>
-            </dl>
-            <p>The following Python code imports the <code>datetime</code> class from the <code>datetime</code> module, calls the <code>datetime.now</code> method to get the current date and time from a computer’s operating system, and then calls the <code>weekday</code> method to get the day of the week as an integer.</p>
-            <div>
-              <pre><code class="language-python hljs" data-highlighted="yes"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1"><span class="hljs-comment"># Import the datetime class from the datetime</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2"><span class="hljs-comment"># module so that it can be used in this program.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4"><span class="hljs-comment"># Call the now() method to get the current</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5"><span class="hljs-comment"># date and time as a datetime object from</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="6"><div class="hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="6"><span class="hljs-comment"># the computer's operating system.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="7"><div class="hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="7">current_date_and_time = datetime.now()</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="8"><div class="hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="8"><span class="hljs-comment"># Call the weekday() method to get the day of the</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="9"><div class="hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="9"><span class="hljs-comment"># week from the current_date_and_time object.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="10"><div class="hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="10">day_of_week = current_date_and_time.weekday()</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="11"><div class="hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="11"><span class="hljs-comment"># Print the day of the week for the user to see.</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="12"><div class="hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="12"><span class="hljs-built_in">print</span>(day_of_week)</td></tr></tbody></table></code></pre>
-              <pre class="console">&gt; python day_of_week.py
-4</pre>
-            </div>
-            <p>After the computer executes line&nbsp;7 in the above code, the <var>current_date_and_time</var> variable will hold the current date and time. After the computer executes line&nbsp;10, the <var>day_of_week</var> variable will hold 0 if today is Monday, 1 if today is Tuesday, and so on to 6 if today is Sunday.</p>
-          </div>
-        </li>
-      </ul>
     </details>
     <details>
       <summary>Testing Procedure</summary>
-      <p>Verify that your program works correctly by following each step in this testing procedure:</p>
-      <ol>
-        <li>
-          <div>
-            If today is any day except Tuesday or Wednesday, run your program using the inputs shown below. Ensure that your program’s output matches the output shown below.
-            <pre class="console">&gt; python discount.py
-Please enter the subtotal: <span class="input">42.75</span>
-Sales tax amount: 2.56
-Total: 45.31
-&gt; python discount.py
-Please enter the subtotal: <span class="input">55.20</span>
-Sales tax amount: 3.31
-Total: 58.51</pre>
-          </div>
-        </li>
-        <li>
-          <div>
-            If today is Tuesday or Wednesday, run your program using the input shown below. Ensure that your program’s output matches output shown below.
-            <pre class="console">&gt; python discount.py
-Please enter the subtotal: <span class="input">42.75</span>
-Sales tax amount: 2.56
-Total: 45.31
-&gt; python discount.py
-Please enter the subtotal: <span class="input">55.20</span>
-Discount amount: 5.52
-Sales tax amount: 2.98
-Total: 52.66</pre>
-          </div>
-        </li>
-        <li>
-          <div>
-            Is there a simple way to test your program for all the days of the week without testing on seven consecutive days and without changing your computer’s operating system date? Hint: In your program immediately after these three lines of code:
-            <div class="example">
-              <pre><code class="language-python nohljsln hljs" data-highlighted="yes"><span class="hljs-comment"># Call the weekday() method to get the day of the</span>
-<span class="hljs-comment"># week from the current_date_and_time object.</span>
-day_of_week = current_date_and_time.weekday()</code>
-              </pre>
-            </div>
-            temporarily add a line of code like this one:
-            <div class="example">
-              <pre><code class="language-python nohljsln hljs" data-highlighted="yes">day_of_week = <span class="hljs-number">2</span></code></pre>
-            </div>
-          </div>
-        </li>
-      </ol>
+      <p>Before you fix the mistakes in the <code>make_full_name</code>
+        and <code>extract_given_name</code> functions, <code>pytest</code>
+        will print output similar to this:</p>
+      <pre class="console">&gt; python test_names.py
+  ===================== test session starts ======================
+  platform win32--Python 3.8.6, pytest-6.1.2, py-1.9.0, pluggy-0.1
+  rootdir: C:\Users\cse111\week03
+  collected 3 items
+  test_names.py::test_make_full_name <span class="fail">FAILED                 [ 33%]</span>
+  test_names.py::test_extract_family_name <span class="pass">PASSED            [ 66%]</span>
+  test_names.py::test_extract_given_name <span class="fail">FAILED             [100%]</span>
+  ========================== FAILURES ============================
+  C:\Users\cse111\early-functions\docs\week03\teach_solution.py:
+  AssertionError: assert 'Smith-Jones;Ava' == 'Smith-Jones; Ava'
+  C:\Users\cse111\early-functions\docs\week03\names.py:31:
+  ValueError: substring not found
+  <span class="fail">================= 2 failed</span>, <span class="pass">1 passed</span> <span class="fail">in 0.14s ==================</span></pre>
+      <br>
+      <p>After you fix the mistakes in the <code>make_full_name</code> and
+        <code>extract_given_name</code> functions, <code>pytest</code> will
+        print output similar to this:
+      </p>
+      <pre class="console">&gt; python test_names.py
+  ===================== test session starts ======================
+  platform win32--Python 3.8.6, pytest-6.1.2, py-1.9.0, pluggy-0.1
+  rootdir: C:\Users\cse111\week03
+  collected 3 items
+  test_names.py::test_make_full_name <span class="pass">PASSED                 [ 33%]</span>
+  test_names.py::test_extract_family_name <span class="pass">PASSED            [ 66%]</span>
+  test_names.py::test_extract_given_name <span class="pass">PASSED             [100%]</span>
+  <span class="pass">====================== 3 passed in 0.12s =======================</span></pre>
+    </details>
+    <details>
+      <summary>Call Graph</summary>
+      <p>The following call graph shows the function calls and returns in
+        the sample solution for this assignment. From this call graph we see
+        that the computer starts executing the sample test functions by
+        calling the <code>pytest.main</code> function. While executing the
+        <code>pytest.main</code> function, the computer calls the
+        <code>test_make_full_name</code> function which calls the
+        <code>make_full_name</code> function. Then while still executing
+        <code>pytest.main</code>, the computer calls the
+        <code>test_extract_family_name</code> function which calls the
+        <code>extract_family_name</code> function. Then while still
+        executing <code>pytest.main</code>, the computer calls the
+        <code>test_extract_given_name</code> function which calls the
+        <code>extract_given_name</code> function.
+      </p>
+      <figure class="full callgraph" style="width:38em">
+        <img src="./CSE 111 _ Code-along Activity_files/call-graph-code-along.svg" alt="A function call graph for this assignment" title="A function call graph for this assignment">
+      </figure>
     </details>
     <h3>Submission</h3>
-    <p>Please pause and re-watch any sections of the instructor video necessary until you have completed the entire activity and your program runs the same as the instructor's. When you are finished:</p>
+    <p>Please pause and re-watch any sections of the instructor video necessary until you have completed the entire
+      activity and your program runs the same as the instructor's. When you are finished:</p>
     <ul>
-      <li><a href="https://byupw.instructure.com/calendar#view_name=agenda" rel="noopener" target="_blank">Return to Canvas</a> to take the quiz.</li>
+      <li><a href="https://byupw.instructure.com/calendar#view_name=agenda" rel="noopener" target="_blank">Return to
+          Canvas</a> to take the quiz.</li>
     </ul>
     <h3>Useful Links:</h3>
     <ul>
-      <li>Return to: <a href="https://byui-cse.github.io/cse111-ww-course/week01/index.html">Week Overview</a> | <a href="https://byui-cse.github.io/cse111-ww-course/index.html">Course Home</a></li>
+      <li>Return to: <a href="https://byui-cse.github.io/cse111-ww-course/week03/index.html">Week Overview</a> | <a href="https://byui-cse.github.io/cse111-ww-course/index.html">Course Home</a></li>
     </ul>
   </main>
   <footer>
     <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
   </footer>
   <script src="./CSE 111 _ Code-along Activity_files/highlight.min.js.download"></script>
-  <script src="./CSE 111 _ Code-along Activity_files/highlightjs-line-numbers.min.js.download"></script>
-  <script>
-    hljs.highlightAll();
-    hljs.initLineNumbersOnLoad();
-  </script>
+  <script>hljs.highlightAll();</script>
 
 
 </body></html>

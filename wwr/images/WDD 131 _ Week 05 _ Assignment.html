@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://byui-cse.github.io/wdd131-ww-course/week05/assignment-05.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | Week 05 | Assignment</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 131 _ Week 05 _ Assignment_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 131 _ Week 05 _ Assignment_files/course.css">
+  <link rel="stylesheet" href="./WDD 131 _ Week 05 _ Assignment_files/vs2015.min.css">
+  <script src="./WDD 131 _ Week 05 _ Assignment_files/ca896ddec2fd3e19_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="./WDD 131 _ Week 05 _ Assignment_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week02/">W2</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04/">W4</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W05 Assignment: Product Review Form</h2>
+
+    <h3>Overview</h3>
+    <p>In this assignment, you will create product review form page. You will use good form design, be given specific
+      field requirements, and you must include a submission confirmation with a counter. In addition, the form must be
+      user friendly on both mobile and desktop screens.</p>
+
+    <figure class="floatright">
+      <img src="./WDD 131 _ Week 05 _ Assignment_files/form-sm.png" alt="Mobile view screenshot example of product review form" width="300">
+      <figcaption>Product Review Form Example</figcaption>
+    </figure>
+
+    <h4>Task</h4>
+
+    <p>Build an HTML form with a confirmation page. The form must meet the given specifications listed in the
+      instructions. The design is up to you but must meet good form design principles. Here is an example screenshot of
+      what you will be building.</p>
+
+    <details class="clo">
+      <summary>Associated Course Learning Outcomes</summary>
+      <ol>
+        <li>Develop responsive web pages that follow best practices and use valid HTML and CSS.</li>
+        <li>Demonstrate proficiency with JavaScript language syntax.</li>
+        <li>Use JavaScript to respond to events and dynamically modify HTML.</li>
+        <li>Demonstrate the traits of an effective team member including clear communication, collaboration, fulfilling
+          assignments, and meeting deadlines.</li>
+      </ol>
+    </details>
+
+    <h3>Activity Instructions</h3>
+    <h4 class="step">File and Folder Setup</h4>
+    <ol>
+      <li>Create a new file named "<strong>form.html</strong>".</li>
+      <li>Add supporting CSS files and JavaScript files as needed and place them into their appropriate folders.</li>
+    </ol>
+
+    <h4 class="step">HTML</h4>
+    <ol>
+      <li>Include the standard HTML head and body components required in this class and include the common footer
+        content used on assignments.</li>
+      <li>The <strong>HTML form</strong> must have the following fields, attributes, and functionality:
+        <ul class="check">
+          <li>
+            <strong>Form</strong>
+            <ul>
+              <li>The <code>form</code> itself should use a <code>method</code> of "<strong>get</strong>" in order to be
+                supported on GitHub.</li>
+              <li>The <code>action</code> should reference a form confirmation page named
+                "<strong>review.html</strong>".</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Product Name</strong>
+            <ul>
+              <li>Use a <code>select</code> element with an appropriate <code>id</code> attribute, <code>name</code>
+                attribute, and set it to be <code>required</code>.
+              </li>
+
+              <li>The first <code>option</code> in the select element is an instructional placeholder that says
+                "<em>Select a Product ...</em>" and is
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/disabled" target="_blank" rel="noopener"><code>disabled</code></a> and <code>selected</code> so that it displays by default but
+                cannot be clicked by the user.
+              </li>
+              <li>The remaining
+                <code>option</code>s are created dynamically using a provided product array.
+                <br>Each option must have a
+                <code>value</code>
+                attribute that is the product name.
+                <div class="callout info">
+                  <p>A product array of objects is provided below to help you understand how to build a select field
+                    with the dynamic options. Normally the data would come from an external source.</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Overall Rating</strong>
+            <ul>
+              <li>The overall product rating should have five levels (1 to 5) or stars.
+                <div class="callout info">
+                  <p>The example form uses star entities ☆ (&amp;star;) to display the level. You are free to
+                    employ a design of your choice. For example, here is another example of using stars that fill up on
+                    selection:
+                    <a href="https://codepen.io/BYU-Idaho/pen/gbbwxrv" target="_blank" rel="noopener">Form Input
+                      Radio Star+</a>
+                    – CodePen.
+                  </p>
+                </div>
+              </li>
+              <li>Use a
+                <code>input</code>
+                of type
+                <code>radio</code>
+                for each of the levels.
+              </li>
+              <li>The required attributes are an
+                <code>id</code>,
+                <code>name</code>
+                (each of the radio buttons should have the same name value), and
+                <code>required</code>
+                <div class="callout info">
+                  <p>Why should each of the radio buttons that are part of this rating have the same
+                    <code>name</code>
+                    value?
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Date of Installation</strong>
+            <ul>
+              <li>Use a
+                <code>input</code>
+                of type
+                <code>date</code>
+                to allow the user to select the date the product was installed.
+              </li>
+              <li>The required attributes are an
+                <code>id</code>,
+                <code>name</code>, and
+                <code>required</code>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Useful Features</strong>
+            <ul>
+              <li>This field allows the user to select all the listed features that they found useful.
+                <br>This is a check all that apply field.
+              </li>
+              <li>Use a <code>input</code> of type <code>checkbox</code></li>
+              <li>Each checkbox should have an <code>id</code>, <code>name</code>, and <code>value</code> attribute.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Written Review</strong>
+            <ul>
+              <li>Use a <code>textarea</code> element to allow the user to write a review. </li>
+              <li>The required attributes are an <code>id</code>
+                and <code>name</code> </li>
+              <li>The written review is not required by the user.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>User Name</strong>
+            <ul>
+              <li>Use a <code>input</code> of type <code>text</code> for the user to enter their name. </li>
+              <li>Add the <code>id</code> and <code>name</code> attributes. </li>
+              <li>The user name entry is optional.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Form Submission Button</strong>
+            <ul>
+              <li>Use a <code>input</code> of type <code>submit</code> with an appropriate <code>value</code> that
+                indicates the form action purpose.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Each form field must have an associated <code>label</code>.
+      </li>
+      <li>Check that the keyboard tab order is correct.</li>
+      <li>Include the common <strong>footer</strong> content found on all assignments.
+      </li>
+
+    </ol>
+
+    <h4 class="step">CSS</h4>
+    <ol>
+      <li>Use your own color schema and typography choices.
+        <div class="callout warning">You are responsible to practice good design principles of alignment, color
+          contrast, proximity, repetition, and usability in all of your work.</div>
+      </li>
+
+
+      <li>Practice good design by laying out the form according to the principles you were taught in the HTML forms
+        learning activity. You are responsible to create a visually appealing design that adheres to
+        <a href="https://byui-cse.github.io/wdd131-ww-course/week03/prepare-design-principles.html" target="_blank" rel="noopener">design principles</a>
+        that support usability and an overall positive user experience.
+      </li>
+
+    </ol>
+
+    <h4 class="step">JavaScript</h4>
+    <ol>
+      <li>Use JavaScript to populate the <strong>Product Name</strong> options where the array's <code>name</code> field
+        is used for the <code>select</code> <code>option</code> display and the array's <code>id</code> is used for the
+        <code>value</code> field. <br>Copy the following array of product objects into your JavaScript file to use as
+        the data source.
+
+        <details>
+          <summary>Product Array</summary>
+          <pre><code class="javascript hljs language-javascript"><span class="hljs-keyword">const</span> products = [
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"fc-1888"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"flux capacitor"</span>,
+    <span class="hljs-attr">averagerating</span>: <span class="hljs-number">4.5</span>
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"fc-2050"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"power laces"</span>,
+    <span class="hljs-attr">averagerating</span>: <span class="hljs-number">4.7</span>
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"fs-1987"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"time circuits"</span>,
+    <span class="hljs-attr">averagerating</span>: <span class="hljs-number">3.5</span>
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"ac-2000"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"low voltage reactor"</span>,
+    <span class="hljs-attr">averagerating</span>: <span class="hljs-number">3.9</span>
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-string">"jj-1969"</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"warp equalizer"</span>,
+    <span class="hljs-attr">averagerating</span>: <span class="hljs-number">5.0</span>
+  }
+];</code></pre>
+        </details>
+
+      </li>
+      <li>Use
+        <strong>localStorage</strong>
+        to keep track of the number of reviews completed by the user client by adding a counter to the form submission
+        <strong>review.html</strong>
+        page. Every time that page is loaded successfully upon form submission, add one to the counter.
+      </li>
+
+    </ol>
+
+    <h4 class="step">Testing</h4>
+    <ol>
+      <li>Continuously check your work by rendering the page locally using Live/Five Server in VS Code.</li>
+      <li>Use the browser's DevTools to check for JavaScript runtime errors in the console or click the red, error icon
+        in the upper right corner of DevTools.</li>
+      <li>Use DevTools
+        <strong>
+          <a href="https://developer.chrome.com/docs/devtools/css-overview/" target="_blank" rel="noopener">CSS
+            Overview</a>
+        </strong>
+        to check your color contrast.
+      </li>
+      <li>Generate the DevTools <strong>Lighthouse</strong> report and run diagnostics for
+        <strong>Accessibility</strong>, <strong>Best Practices</strong>, and <strong>SEO</strong> in both the mobile and
+        desktop views.
+        <div class="callout warning">It is best to test your page in a <strong>Private</strong> or
+          <strong>Incognito</strong> browser window.
+        </div>
+      </li>
+    </ol>
+    <h3>Submission and Audit</h3>
+    <ol>
+      <li>Commit your local repository and push or upload your work to your GitHub Pages enabled wdd 131 repository on GitHub.</li>
+      <li>Use this ✔ <a href="https://byui-cse.github.io/wdd-audits/wdd131-w05-form.html">Page Audit Tool</a> to self-check your work for some
+        required HTML elements and CSS content. This audit tool is also used by the assessment team.</li>
+      <li>
+        <strong>Share</strong>
+        your work by posting your URL in the course's Microsoft <strong>Teams Week 05 Forum</strong> and comment on your
+        peers' work by providing constructive feedback.
+      </li>
+      <li>Return to Canvas and submit your correct GitHub Pages enabled URL.
+        <pre><code class="text hljs language-plaintext">https://your-github-username.github.io/wdd131/form.html</code></pre>
+      </li>
+    </ol>
+
+    <hr>
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05/index.html">Week 05 Home</a></span>
+    </nav>
+
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 131 _ Week 05 _ Assignment_files/highlight.min.js.download"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script src="./WDD 131 _ Week 05 _ Assignment_files/copy.js.download" defer="defer"></script>
+
+
+</body></html>
